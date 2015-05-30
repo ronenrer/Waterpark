@@ -1,0 +1,4 @@
+[07-Nov-2013 17:45:07] PHP Fatal error:  Call to a member function get_tickets_bookings() on a non-object in /home1/oraplay/public_html/AURAPLAYER.COM/wp-content/plugins/events-manager/templates/emails/bookingsummary.php on line 8
+[07-Nov-2013 17:45:24] PHP Fatal error:  Call to a member function get_tickets_bookings() on a non-object in /home1/oraplay/public_html/AURAPLAYER.COM/wp-content/plugins/events-manager/templates/emails/bookingtickets.php on line 1
+[17-Feb-2014 12:41:56] PHP Fatal error:  Call to a member function get_tickets_bookings() on a non-object in /home1/oraplay/public_html/wp-content/plugins/events-manager/templates/emails/bookingtickets.php on line 1
+[17-Feb-2014 12:41:58] PHP Fatal error:  Call to a member function get_tickets_bookings() on a non-object in /home1/oraplay/public_html/wp-content/plugins/events-manager/templates/emails/bookingsummary.php on line 8

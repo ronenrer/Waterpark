@@ -1,0 +1,8 @@
+[07-Nov-2013 17:40:16] PHP Fatal error:  Class 'BP_Component' not found in /home1/oraplay/public_html/AURAPLAYER.COM/wp-content/plugins/events-manager/buddypress/bp-em-core.php on line 8
+[07-Nov-2013 17:40:21] PHP Fatal error:  Call to undefined function  add_action() in /home1/oraplay/public_html/AURAPLAYER.COM/wp-content/plugins/events-manager/buddypress/bp-em-notifications.php on line 59
+[07-Nov-2013 17:40:26] PHP Fatal error:  Call to undefined function  add_filter() in /home1/oraplay/public_html/AURAPLAYER.COM/wp-content/plugins/events-manager/buddypress/bp-em-activity.php on line 67
+[07-Nov-2013 17:42:25] PHP Fatal error:  Call to undefined function  add_action() in /home1/oraplay/public_html/AURAPLAYER.COM/wp-content/plugins/events-manager/buddypress/bp-em-groups.php on line 30
+[17-Feb-2014 12:39:14] PHP Fatal error:  Class 'BP_Component' not found in /home1/oraplay/public_html/wp-content/plugins/events-manager/buddypress/bp-em-core.php on line 8
+[17-Feb-2014 12:40:02] PHP Fatal error:  Call to undefined function  add_action() in /home1/oraplay/public_html/wp-content/plugins/events-manager/buddypress/bp-em-notifications.php on line 59
+[17-Feb-2014 12:40:06] PHP Fatal error:  Call to undefined function  add_filter() in /home1/oraplay/public_html/wp-content/plugins/events-manager/buddypress/bp-em-activity.php on line 67
+[17-Feb-2014 12:40:16] PHP Fatal error:  Call to undefined function  add_action() in /home1/oraplay/public_html/wp-content/plugins/events-manager/buddypress/bp-em-groups.php on line 30

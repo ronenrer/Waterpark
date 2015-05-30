@@ -1,0 +1,239 @@
+// Core variables and mixins
+@import "variables.less";
+@import "bootstrap/mixins.less";
+
+// Reset
+@import "bootstrap/normalize.less";
+@import "bootstrap/print.less";
+
+// Core CSS
+@import "bootstrap/scaffolding.less";
+@import "bootstrap/type.less";
+@import "bootstrap/code.less";
+@import "bootstrap/grid.less";
+
+
+@import "bootstrap/tables.less";
+@import "bootstrap/forms.less";
+@import "bootstrap/buttons.less";
+
+// Components
+@import "bootstrap/component-animations.less";
+@import "bootstrap/glyphicons.less";
+@import "bootstrap/dropdowns.less";
+@import "bootstrap/button-groups.less";
+@import "bootstrap/input-groups.less";
+@import "bootstrap/navs.less";
+@import "bootstrap/navbar.less";
+@import "bootstrap/pagination.less";
+@import "bootstrap/pager.less";
+@import "bootstrap/labels.less";
+@import "bootstrap/badges.less";
+@import "bootstrap/thumbnails.less";
+@import "bootstrap/alerts.less";
+@import "bootstrap/progress-bars.less";
+@import "bootstrap/media.less";
+@import "bootstrap/list-group.less";
+@import "bootstrap/panels.less";
+@import "bootstrap/wells.less";
+@import "bootstrap/close.less";
+
+// Components w/ JavaScript
+@import "bootstrap/modals.less";
+@import "bootstrap/tooltip.less";
+@import "bootstrap/popovers.less";
+@import "bootstrap/carousel.less";
+
+// Utility classes
+@import "bootstrap/utilities.less";
+@import "bootstrap/responsive-utilities.less";
+
+// Custom CSS
+@import url(http://fonts.googleapis.com/earlyaccess/alefhebrew.css);
+body{
+	background:#fff;
+}
+.container{
+	background:#fff;
+	.box-shadow(0 2px 5px 2px rgba(0,0,0,.15));
+}
+.header{position: relative;}
+.tickets-top{
+	position: absolute;
+	left:-5px;
+	top:0;
+}
+.video-container{
+	margin:0 -15px;
+	img{max-width:100%;}
+}
+.sidebar{padding:0}
+#widget_sp_image-2{
+	position:relative;
+	.glyphicon-search{
+	 position: absolute;
+	  top: 90px;
+	  background: rgba(255, 255, 255, 0.85);
+	  width: 37px;
+	  height: 37px;
+	  border-radius: 5px;
+	  right: 13px;
+	  text-align: center;
+	  line-height: 37px;
+	  border: 1px solid rgb(173, 173, 173);
+	  font-size: 22px;
+	  color: rgb(0, 0, 0);
+	}
+}
+img{max-width:100%;}
+
+.main-features{
+	.feature{
+		position:relative;
+		margin-bottom:20px;
+		img{max-width:100%;}
+		h3{
+			position:absolute;
+			width:100%;
+			top:0;
+			background: rgba(2,125,188,0.9);
+			color:#fff;
+			margin:0;
+			line-height:50px;
+			padding-right:25px;
+		}
+	}
+}
+.home .article-footer{
+	margin-top:10px;
+}
+.home-bottom{margin-top:40px;}
+.sidebar{padding:0}
+.awesome-weather-wrap{
+	width:50%;
+	float:left;
+	border:1px solid #fff;
+}
+.awesome-weather-header{display:none}
+.widgettitle{
+	font-size:32px;
+	color:@brand-primary;
+	border-top:2px solid @brand-accent-light;
+	padding:20px 0;
+	line-height:1;
+	margin-bottom:0;
+	}
+.sidebar .spider_calendar{
+	.calbg{
+		background:@brand-dark;
+		background-image: none !important;
+	}
+	.cell_body{
+		background-color:@brand-dark !important;
+	}
+
+}
+#cats_widget_1{
+	padding:0;
+	margin-top:12px;
+	li{
+		display:inline;
+		p,p:first-letter{color:@text-color !important}
+		p{
+			left:0;
+			&:first-child{
+				border-radius:50%;
+				width:15px;
+				height:15px;
+			}
+		}
+	}
+}
+.footer{
+	background:@brand-light;
+	margin:60px -15px 0;
+	color:#fff;
+	#inner-footer{
+		padding:20px;
+		a{color:#fff;}
+	}
+}
+.top-footer{
+	background:@brand-dark;
+	height:40px;
+}
+@media (min-width: @grid-float-breakpoint){
+  	.col-sm-1, .col-sm-10, .col-sm-11, .col-sm-12, .col-sm-2, .col-sm-3, .col-sm-4, .col-sm-5, .col-sm-6, 
+  	.col-sm-7, .col-sm-8, .col-sm-9{
+  		float: right;
+  	}
+  	.top-header{
+  		padding: 8px 20% 0 22%;
+  		.tagline{
+  			font-size: 36px;
+  			font-weight:700;
+  			color:@brand-primary;
+  			span{color:@brand-accent;}
+  		}
+  		.site-phone{
+  			font-size: 18px;
+  			color:#664D3D;
+  			margin-top:12px;
+  		}
+  	}
+ 	.navbar-brand{
+		position: absolute;
+		right:20px;
+		top:0;
+		padding:0;
+	}
+	
+	#inner-content{padding-top:40px;}
+	#main{
+		width:73%;
+		padding-right: 5px;
+		padding-left: 40px;
+	}
+	.sidebar{width:27%;padding-left:5px;}
+	#calendar_1 > table{width:302px !important;}
+	.main-features .col-md-6:nth-child(2n+1){
+		padding-left:9px;
+	}
+	.main-features .col-md-6:nth-child(2n+2){
+		padding-right:9px;
+	}
+  }
+  .instagram .widgettitle{
+  	margin-top:0;
+  	padding:12px 0;
+  }
+@media (min-width: @screen-md){
+ 	.col-md-1, .col-md-10, .col-md-11, .col-md-12, .col-md-2, .col-md-3, .col-md-4, .col-md-5, .col-md-6, 
+ 	.col-md-7, .col-md-8, .col-md-9{
+ 		float:right;
+ 	}
+ 	ul#menu-main{
+		float:right;
+		padding-right:20%;
+		margin:20px 0;
+		> li{
+			> a{
+				border-left:1px solid @text-color;
+				padding:0 10px 0;
+				line-height:1;
+			}
+		}
+	}
+ 	.navbar-nav > li {
+		float:right;
+		a{
+			font-size:14px;
+			color:@text-color;
+
+		}
+	}
+		
+ }
+@media (min-width:@screen-lg-desktop){
+	ul#menu-main{padding-right:21%;}
+}

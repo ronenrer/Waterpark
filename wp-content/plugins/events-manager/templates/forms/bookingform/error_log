@@ -1,0 +1,8 @@
+[07-Nov-2013 17:46:57] PHP Fatal error:  Call to a member function get_bookings() on a non-object in /home1/oraplay/public_html/AURAPLAYER.COM/wp-content/plugins/events-manager/templates/forms/bookingform/tickets-list.php on line 8
+[07-Nov-2013 17:46:59] PHP Fatal error:  Call to undefined function  is_user_logged_in() in /home1/oraplay/public_html/AURAPLAYER.COM/wp-content/plugins/events-manager/templates/forms/bookingform/booking-fields.php on line 8
+[07-Nov-2013 17:47:00] PHP Fatal error:  Call to undefined function  site_url() in /home1/oraplay/public_html/AURAPLAYER.COM/wp-content/plugins/events-manager/templates/forms/bookingform/login.php on line 7
+[07-Nov-2013 17:47:03] PHP Fatal error:  Call to undefined function  do_action() in /home1/oraplay/public_html/AURAPLAYER.COM/wp-content/plugins/events-manager/templates/forms/bookingform/ticket-single.php on line 9
+[17-Feb-2014 12:40:33] PHP Fatal error:  Call to a member function get_bookings() on a non-object in /home1/oraplay/public_html/wp-content/plugins/events-manager/templates/forms/bookingform/tickets-list.php on line 8
+[17-Feb-2014 12:40:35] PHP Fatal error:  Call to undefined function  is_user_logged_in() in /home1/oraplay/public_html/wp-content/plugins/events-manager/templates/forms/bookingform/booking-fields.php on line 8
+[17-Feb-2014 12:40:39] PHP Fatal error:  Call to undefined function  do_action() in /home1/oraplay/public_html/wp-content/plugins/events-manager/templates/forms/bookingform/ticket-single.php on line 9
+[17-Feb-2014 12:44:43] PHP Fatal error:  Call to undefined function  site_url() in /home1/oraplay/public_html/wp-content/plugins/events-manager/templates/forms/bookingform/login.php on line 7

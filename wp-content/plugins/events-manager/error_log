@@ -1,0 +1,171 @@
+[07-Nov-2013 17:38:43] PHP Fatal error:  Call to undefined function  trailingslashit() in /home1/oraplay/public_html/AURAPLAYER.COM/wp-content/plugins/events-manager/events-manager.php on line 33
+[07-Nov-2013 17:39:48] PHP Fatal error:  Call to undefined function  add_shortcode() in /home1/oraplay/public_html/AURAPLAYER.COM/wp-content/plugins/events-manager/em-shortcode.php on line 12
+[07-Nov-2013 17:39:50] PHP Fatal error:  Call to undefined function  add_filter() in /home1/oraplay/public_html/AURAPLAYER.COM/wp-content/plugins/events-manager/em-emails.php on line 55
+[07-Nov-2013 17:39:51] PHP Fatal error:  Call to undefined function  get_option() in /home1/oraplay/public_html/AURAPLAYER.COM/wp-content/plugins/events-manager/em-wpfc.php on line 15
+[07-Nov-2013 17:39:55] PHP Fatal error:  Call to undefined function  add_action() in /home1/oraplay/public_html/AURAPLAYER.COM/wp-content/plugins/events-manager/em-rss.php on line 40
+[07-Nov-2013 17:39:58] PHP Fatal error:  Call to undefined function  get_option() in /home1/oraplay/public_html/AURAPLAYER.COM/wp-content/plugins/events-manager/em-posts.php on line 8
+[07-Nov-2013 17:40:04] PHP Warning:  file_get_contents(WP_PLUGIN_DIR/events-manager/includes/sample-placeholders/booking-email.html) [<a href='function.file-get-contents'>function.file-get-contents</a>]: failed to open stream: No such file or directory in /home1/oraplay/public_html/AURAPLAYER.COM/wp-content/plugins/events-manager/em-debug.php on line 9
+[07-Nov-2013 17:40:04] PHP Warning:  file_get_contents(WP_PLUGIN_DIR/events-manager/includes/sample-placeholders/event-single.html) [<a href='function.file-get-contents'>function.file-get-contents</a>]: failed to open stream: No such file or directory in /home1/oraplay/public_html/AURAPLAYER.COM/wp-content/plugins/events-manager/em-debug.php on line 10
+[07-Nov-2013 17:40:04] PHP Fatal error:  Call to undefined function  __() in /home1/oraplay/public_html/AURAPLAYER.COM/wp-content/plugins/events-manager/em-debug.php on line 18
+[07-Nov-2013 17:40:05] PHP Fatal error:  Class 'EM_Object' not found in /home1/oraplay/public_html/AURAPLAYER.COM/wp-content/plugins/events-manager/em-bookings.php on line 9
+[07-Nov-2013 17:40:06] PHP Fatal error:  Call to undefined function  add_action() in /home1/oraplay/public_html/AURAPLAYER.COM/wp-content/plugins/events-manager/em-actions.php on line 635
+[07-Nov-2013 17:40:08] PHP Fatal error:  Call to undefined function  add_filter() in /home1/oraplay/public_html/AURAPLAYER.COM/wp-content/plugins/events-manager/em-bbpress.php on line 23
+[07-Nov-2013 17:40:09] PHP Fatal error:  Call to undefined function  add_action() in /home1/oraplay/public_html/AURAPLAYER.COM/wp-content/plugins/events-manager/em-ml.php on line 234
+[07-Nov-2013 17:40:10] PHP Fatal error:  Call to undefined function  add_action() in /home1/oraplay/public_html/AURAPLAYER.COM/wp-content/plugins/events-manager/em-ical.php on line 15
+[07-Nov-2013 17:40:12] PHP Fatal error:  Call to undefined function  add_filter() in /home1/oraplay/public_html/AURAPLAYER.COM/wp-content/plugins/events-manager/em-events.php on line 128
+[17-Feb-2014 12:38:32] PHP Fatal error:  Call to undefined function  trailingslashit() in /home1/oraplay/public_html/wp-content/plugins/events-manager/events-manager.php on line 33
+[17-Feb-2014 12:38:35] PHP Fatal error:  Call to undefined function  add_filter() in /home1/oraplay/public_html/wp-content/plugins/events-manager/em-bbpress.php on line 23
+[17-Feb-2014 12:38:37] PHP Fatal error:  Class 'EM_Object' not found in /home1/oraplay/public_html/wp-content/plugins/events-manager/em-bookings.php on line 9
+[17-Feb-2014 12:38:38] PHP Fatal error:  Call to undefined function  add_action() in /home1/oraplay/public_html/wp-content/plugins/events-manager/em-ml.php on line 234
+[17-Feb-2014 12:38:40] PHP Fatal error:  Call to undefined function  add_action() in /home1/oraplay/public_html/wp-content/plugins/events-manager/em-ical.php on line 15
+[17-Feb-2014 12:38:41] PHP Fatal error:  Call to undefined function  add_shortcode() in /home1/oraplay/public_html/wp-content/plugins/events-manager/em-shortcode.php on line 12
+[17-Feb-2014 12:38:42] PHP Fatal error:  Call to undefined function  add_filter() in /home1/oraplay/public_html/wp-content/plugins/events-manager/em-events.php on line 128
+[17-Feb-2014 12:38:43] PHP Fatal error:  Call to undefined function  add_action() in /home1/oraplay/public_html/wp-content/plugins/events-manager/em-actions.php on line 635
+[17-Feb-2014 12:38:48] PHP Fatal error:  Call to undefined function  add_filter() in /home1/oraplay/public_html/wp-content/plugins/events-manager/em-emails.php on line 55
+[17-Feb-2014 12:38:55] PHP Fatal error:  Call to undefined function  get_option() in /home1/oraplay/public_html/wp-content/plugins/events-manager/em-wpfc.php on line 15
+[17-Feb-2014 12:38:56] PHP Warning:  file_get_contents(WP_PLUGIN_DIR/events-manager/includes/sample-placeholders/booking-email.html) [<a href='function.file-get-contents'>function.file-get-contents</a>]: failed to open stream: No such file or directory in /home1/oraplay/public_html/wp-content/plugins/events-manager/em-debug.php on line 9
+[17-Feb-2014 12:38:56] PHP Warning:  file_get_contents(WP_PLUGIN_DIR/events-manager/includes/sample-placeholders/event-single.html) [<a href='function.file-get-contents'>function.file-get-contents</a>]: failed to open stream: No such file or directory in /home1/oraplay/public_html/wp-content/plugins/events-manager/em-debug.php on line 10
+[17-Feb-2014 12:38:56] PHP Fatal error:  Call to undefined function  __() in /home1/oraplay/public_html/wp-content/plugins/events-manager/em-debug.php on line 18
+[17-Feb-2014 12:39:00] PHP Fatal error:  Call to undefined function  add_action() in /home1/oraplay/public_html/wp-content/plugins/events-manager/em-rss.php on line 40
+[17-Feb-2014 12:39:01] PHP Fatal error:  Call to undefined function  get_option() in /home1/oraplay/public_html/wp-content/plugins/events-manager/em-posts.php on line 8
+[21-Apr-2014 22:00:33] PHP Fatal error:  Call to undefined function  add_action() in /home1/oraplay/public_html/wp-content/plugins/events-manager/em-actions.php on line 635
+[21-Apr-2014 22:00:33] PHP Fatal error:  Call to undefined function  add_action() in /home1/oraplay/public_html/wp-content/plugins/events-manager/em-actions.php on line 635
+[21-Apr-2014 22:00:34] PHP Fatal error:  Call to undefined function  add_action() in /home1/oraplay/public_html/wp-content/plugins/events-manager/em-actions.php on line 635
+[21-Apr-2014 22:00:34] PHP Fatal error:  Call to undefined function  add_action() in /home1/oraplay/public_html/wp-content/plugins/events-manager/em-actions.php on line 635
+[21-Apr-2014 22:00:34] PHP Fatal error:  Call to undefined function  add_action() in /home1/oraplay/public_html/wp-content/plugins/events-manager/em-actions.php on line 635
+[21-Apr-2014 22:00:36] PHP Fatal error:  Call to undefined function  add_action() in /home1/oraplay/public_html/wp-content/plugins/events-manager/em-actions.php on line 635
+[21-Apr-2014 22:00:37] PHP Fatal error:  Call to undefined function  add_action() in /home1/oraplay/public_html/wp-content/plugins/events-manager/em-actions.php on line 635
+[21-Apr-2014 22:00:37] PHP Fatal error:  Call to undefined function  add_action() in /home1/oraplay/public_html/wp-content/plugins/events-manager/em-actions.php on line 635
+[21-Apr-2014 22:00:38] PHP Fatal error:  Call to undefined function  add_action() in /home1/oraplay/public_html/wp-content/plugins/events-manager/em-actions.php on line 635
+[22-Apr-2014 00:35:59] PHP Fatal error:  Call to undefined function  add_action() in /home1/oraplay/public_html/wp-content/plugins/events-manager/em-actions.php on line 635
+[01-May-2014 21:44:30 America/Chicago] PHP Fatal error:  Call to undefined function add_action() in /home1/oraplay/public_html/wp-content/plugins/events-manager/em-actions.php on line 635
+[01-May-2014 21:44:31 America/Chicago] PHP Fatal error:  Call to undefined function add_action() in /home1/oraplay/public_html/wp-content/plugins/events-manager/em-actions.php on line 635
+[01-May-2014 21:44:31 America/Chicago] PHP Fatal error:  Call to undefined function add_action() in /home1/oraplay/public_html/wp-content/plugins/events-manager/em-actions.php on line 635
+[01-May-2014 21:44:32 America/Chicago] PHP Fatal error:  Call to undefined function add_action() in /home1/oraplay/public_html/wp-content/plugins/events-manager/em-actions.php on line 635
+[01-May-2014 21:44:34 America/Chicago] PHP Fatal error:  Call to undefined function add_action() in /home1/oraplay/public_html/wp-content/plugins/events-manager/em-actions.php on line 635
+[01-May-2014 21:44:34 America/Chicago] PHP Fatal error:  Call to undefined function add_action() in /home1/oraplay/public_html/wp-content/plugins/events-manager/em-actions.php on line 635
+[01-May-2014 21:44:34 America/Chicago] PHP Fatal error:  Call to undefined function add_action() in /home1/oraplay/public_html/wp-content/plugins/events-manager/em-actions.php on line 635
+[01-May-2014 21:44:40 America/Chicago] PHP Fatal error:  Call to undefined function add_action() in /home1/oraplay/public_html/wp-content/plugins/events-manager/em-actions.php on line 635
+[01-May-2014 21:44:40 America/Chicago] PHP Fatal error:  Call to undefined function add_action() in /home1/oraplay/public_html/wp-content/plugins/events-manager/em-actions.php on line 635
+[01-May-2014 21:44:40 America/Chicago] PHP Fatal error:  Call to undefined function add_action() in /home1/oraplay/public_html/wp-content/plugins/events-manager/em-actions.php on line 635
+[04-May-2014 19:36:24 America/Chicago] PHP Fatal error:  Call to undefined function add_action() in /home1/oraplay/public_html/wp-content/plugins/events-manager/em-actions.php on line 635
+[04-May-2014 19:36:25 America/Chicago] PHP Fatal error:  Call to undefined function add_action() in /home1/oraplay/public_html/wp-content/plugins/events-manager/em-actions.php on line 635
+[04-May-2014 19:36:30 America/Chicago] PHP Fatal error:  Call to undefined function add_action() in /home1/oraplay/public_html/wp-content/plugins/events-manager/em-actions.php on line 635
+[04-May-2014 19:36:33 America/Chicago] PHP Fatal error:  Call to undefined function add_action() in /home1/oraplay/public_html/wp-content/plugins/events-manager/em-actions.php on line 635
+[04-May-2014 19:36:35 America/Chicago] PHP Fatal error:  Call to undefined function add_action() in /home1/oraplay/public_html/wp-content/plugins/events-manager/em-actions.php on line 635
+[04-May-2014 19:36:35 America/Chicago] PHP Fatal error:  Call to undefined function add_action() in /home1/oraplay/public_html/wp-content/plugins/events-manager/em-actions.php on line 635
+[04-May-2014 19:36:39 America/Chicago] PHP Fatal error:  Call to undefined function add_action() in /home1/oraplay/public_html/wp-content/plugins/events-manager/em-actions.php on line 635
+[04-May-2014 19:36:42 America/Chicago] PHP Fatal error:  Call to undefined function add_action() in /home1/oraplay/public_html/wp-content/plugins/events-manager/em-actions.php on line 635
+[04-May-2014 19:36:44 America/Chicago] PHP Fatal error:  Call to undefined function add_action() in /home1/oraplay/public_html/wp-content/plugins/events-manager/em-actions.php on line 635
+[04-May-2014 19:36:48 America/Chicago] PHP Fatal error:  Call to undefined function add_action() in /home1/oraplay/public_html/wp-content/plugins/events-manager/em-actions.php on line 635
+[04-May-2014 19:36:57 America/Chicago] PHP Fatal error:  Call to undefined function add_action() in /home1/oraplay/public_html/wp-content/plugins/events-manager/em-actions.php on line 635
+[04-May-2014 19:36:58 America/Chicago] PHP Fatal error:  Call to undefined function add_action() in /home1/oraplay/public_html/wp-content/plugins/events-manager/em-actions.php on line 635
+[04-May-2014 19:36:58 America/Chicago] PHP Fatal error:  Call to undefined function add_action() in /home1/oraplay/public_html/wp-content/plugins/events-manager/em-actions.php on line 635
+[04-May-2014 19:36:58 America/Chicago] PHP Fatal error:  Call to undefined function add_action() in /home1/oraplay/public_html/wp-content/plugins/events-manager/em-actions.php on line 635
+[04-May-2014 19:37:00 America/Chicago] PHP Fatal error:  Call to undefined function add_action() in /home1/oraplay/public_html/wp-content/plugins/events-manager/em-actions.php on line 635
+[04-May-2014 19:37:00 America/Chicago] PHP Fatal error:  Call to undefined function add_action() in /home1/oraplay/public_html/wp-content/plugins/events-manager/em-actions.php on line 635
+[04-May-2014 19:37:01 America/Chicago] PHP Fatal error:  Call to undefined function add_action() in /home1/oraplay/public_html/wp-content/plugins/events-manager/em-actions.php on line 635
+[04-May-2014 19:37:03 America/Chicago] PHP Fatal error:  Call to undefined function add_action() in /home1/oraplay/public_html/wp-content/plugins/events-manager/em-actions.php on line 635
+[04-May-2014 19:37:17 America/Chicago] PHP Fatal error:  Call to undefined function add_action() in /home1/oraplay/public_html/wp-content/plugins/events-manager/em-actions.php on line 635
+[04-May-2014 19:37:25 America/Chicago] PHP Fatal error:  Call to undefined function add_action() in /home1/oraplay/public_html/wp-content/plugins/events-manager/em-actions.php on line 635
+[10-Jul-2014 05:29:31 America/Chicago] PHP Fatal error:  Call to undefined function add_action() in /home1/oraplay/public_html/wp-content/plugins/events-manager/em-ical.php on line 15
+[10-Jul-2014 05:29:34 America/Chicago] PHP Fatal error:  Call to undefined function add_shortcode() in /home1/oraplay/public_html/wp-content/plugins/events-manager/em-shortcode.php on line 12
+[10-Jul-2014 05:29:36 America/Chicago] PHP Fatal error:  Call to undefined function trailingslashit() in /home1/oraplay/public_html/wp-content/plugins/events-manager/events-manager.php on line 33
+[31-Aug-2014 04:58:23 America/Chicago] PHP Fatal error:  Call to undefined function add_action() in /home1/oraplay/public_html/wp-content/plugins/events-manager/em-actions.php on line 635
+[31-Aug-2014 04:58:23 America/Chicago] PHP Fatal error:  Call to undefined function add_action() in /home1/oraplay/public_html/wp-content/plugins/events-manager/em-actions.php on line 635
+[31-Aug-2014 04:58:23 America/Chicago] PHP Fatal error:  Call to undefined function add_action() in /home1/oraplay/public_html/wp-content/plugins/events-manager/em-actions.php on line 635
+[31-Aug-2014 04:58:23 America/Chicago] PHP Fatal error:  Call to undefined function add_action() in /home1/oraplay/public_html/wp-content/plugins/events-manager/em-actions.php on line 635
+[31-Aug-2014 04:58:24 America/Chicago] PHP Fatal error:  Call to undefined function add_action() in /home1/oraplay/public_html/wp-content/plugins/events-manager/em-actions.php on line 635
+[31-Aug-2014 04:58:24 America/Chicago] PHP Fatal error:  Call to undefined function add_action() in /home1/oraplay/public_html/wp-content/plugins/events-manager/em-actions.php on line 635
+[31-Aug-2014 04:58:24 America/Chicago] PHP Fatal error:  Call to undefined function add_action() in /home1/oraplay/public_html/wp-content/plugins/events-manager/em-actions.php on line 635
+[31-Aug-2014 04:58:28 America/Chicago] PHP Fatal error:  Call to undefined function add_action() in /home1/oraplay/public_html/wp-content/plugins/events-manager/em-actions.php on line 635
+[10-Sep-2014 00:06:46 America/Chicago] PHP Fatal error:  Call to undefined function add_action() in /home1/oraplay/public_html/wp-content/plugins/events-manager/em-actions.php on line 635
+[10-Sep-2014 00:06:46 America/Chicago] PHP Fatal error:  Call to undefined function add_action() in /home1/oraplay/public_html/wp-content/plugins/events-manager/em-actions.php on line 635
+[10-Sep-2014 00:06:46 America/Chicago] PHP Fatal error:  Call to undefined function add_action() in /home1/oraplay/public_html/wp-content/plugins/events-manager/em-actions.php on line 635
+[10-Sep-2014 00:06:46 America/Chicago] PHP Fatal error:  Call to undefined function add_action() in /home1/oraplay/public_html/wp-content/plugins/events-manager/em-actions.php on line 635
+[10-Sep-2014 00:06:47 America/Chicago] PHP Fatal error:  Call to undefined function add_action() in /home1/oraplay/public_html/wp-content/plugins/events-manager/em-actions.php on line 635
+[10-Sep-2014 00:06:47 America/Chicago] PHP Fatal error:  Call to undefined function add_action() in /home1/oraplay/public_html/wp-content/plugins/events-manager/em-actions.php on line 635
+[10-Sep-2014 00:06:47 America/Chicago] PHP Fatal error:  Call to undefined function add_action() in /home1/oraplay/public_html/wp-content/plugins/events-manager/em-actions.php on line 635
+[10-Sep-2014 00:06:48 America/Chicago] PHP Fatal error:  Call to undefined function add_action() in /home1/oraplay/public_html/wp-content/plugins/events-manager/em-actions.php on line 635
+[10-Sep-2014 00:06:48 America/Chicago] PHP Fatal error:  Call to undefined function add_action() in /home1/oraplay/public_html/wp-content/plugins/events-manager/em-actions.php on line 635
+[13-Sep-2014 03:13:36 America/Chicago] PHP Fatal error:  Call to undefined function add_action() in /home1/oraplay/public_html/wp-content/plugins/events-manager/em-actions.php on line 635
+[13-Sep-2014 03:13:36 America/Chicago] PHP Fatal error:  Call to undefined function add_action() in /home1/oraplay/public_html/wp-content/plugins/events-manager/em-actions.php on line 635
+[13-Sep-2014 03:13:36 America/Chicago] PHP Fatal error:  Call to undefined function add_action() in /home1/oraplay/public_html/wp-content/plugins/events-manager/em-actions.php on line 635
+[13-Sep-2014 03:13:36 America/Chicago] PHP Fatal error:  Call to undefined function add_action() in /home1/oraplay/public_html/wp-content/plugins/events-manager/em-actions.php on line 635
+[13-Sep-2014 03:13:36 America/Chicago] PHP Fatal error:  Call to undefined function add_action() in /home1/oraplay/public_html/wp-content/plugins/events-manager/em-actions.php on line 635
+[13-Sep-2014 03:13:39 America/Chicago] PHP Fatal error:  Call to undefined function add_action() in /home1/oraplay/public_html/wp-content/plugins/events-manager/em-actions.php on line 635
+[13-Sep-2014 03:13:39 America/Chicago] PHP Fatal error:  Call to undefined function add_action() in /home1/oraplay/public_html/wp-content/plugins/events-manager/em-actions.php on line 635
+[13-Sep-2014 03:13:41 America/Chicago] PHP Fatal error:  Call to undefined function add_action() in /home1/oraplay/public_html/wp-content/plugins/events-manager/em-actions.php on line 635
+[13-Sep-2014 03:13:42 America/Chicago] PHP Fatal error:  Call to undefined function add_action() in /home1/oraplay/public_html/wp-content/plugins/events-manager/em-actions.php on line 635
+[13-Sep-2014 03:13:43 America/Chicago] PHP Fatal error:  Call to undefined function add_action() in /home1/oraplay/public_html/wp-content/plugins/events-manager/em-actions.php on line 635
+[22-Oct-2014 20:00:43 America/Chicago] PHP Fatal error:  Call to undefined function add_action() in /home1/oraplay/public_html/wp-content/plugins/events-manager/em-actions.php on line 635
+[22-Oct-2014 20:00:43 America/Chicago] PHP Fatal error:  Call to undefined function add_action() in /home1/oraplay/public_html/wp-content/plugins/events-manager/em-actions.php on line 635
+[22-Oct-2014 20:00:43 America/Chicago] PHP Fatal error:  Call to undefined function add_action() in /home1/oraplay/public_html/wp-content/plugins/events-manager/em-actions.php on line 635
+[22-Oct-2014 20:00:43 America/Chicago] PHP Fatal error:  Call to undefined function add_action() in /home1/oraplay/public_html/wp-content/plugins/events-manager/em-actions.php on line 635
+[22-Oct-2014 20:00:43 America/Chicago] PHP Fatal error:  Call to undefined function add_action() in /home1/oraplay/public_html/wp-content/plugins/events-manager/em-actions.php on line 635
+[22-Oct-2014 20:00:44 America/Chicago] PHP Fatal error:  Call to undefined function add_action() in /home1/oraplay/public_html/wp-content/plugins/events-manager/em-actions.php on line 635
+[22-Oct-2014 20:00:45 America/Chicago] PHP Fatal error:  Call to undefined function add_action() in /home1/oraplay/public_html/wp-content/plugins/events-manager/em-actions.php on line 635
+[22-Oct-2014 20:06:51 America/Chicago] PHP Fatal error:  Call to undefined function add_action() in /home1/oraplay/public_html/wp-content/plugins/events-manager/em-actions.php on line 635
+[22-Oct-2014 20:20:10 America/Chicago] PHP Fatal error:  Call to undefined function add_action() in /home1/oraplay/public_html/wp-content/plugins/events-manager/em-actions.php on line 635
+[26-Oct-2014 05:23:49 America/Chicago] PHP Fatal error:  Call to undefined function add_action() in /home1/oraplay/public_html/wp-content/plugins/events-manager/em-actions.php on line 635
+[26-Oct-2014 05:23:49 America/Chicago] PHP Fatal error:  Call to undefined function add_action() in /home1/oraplay/public_html/wp-content/plugins/events-manager/em-actions.php on line 635
+[26-Oct-2014 05:23:49 America/Chicago] PHP Fatal error:  Call to undefined function add_action() in /home1/oraplay/public_html/wp-content/plugins/events-manager/em-actions.php on line 635
+[26-Oct-2014 05:23:49 America/Chicago] PHP Fatal error:  Call to undefined function add_action() in /home1/oraplay/public_html/wp-content/plugins/events-manager/em-actions.php on line 635
+[26-Oct-2014 05:23:50 America/Chicago] PHP Fatal error:  Call to undefined function add_action() in /home1/oraplay/public_html/wp-content/plugins/events-manager/em-actions.php on line 635
+[26-Oct-2014 05:23:50 America/Chicago] PHP Fatal error:  Call to undefined function add_action() in /home1/oraplay/public_html/wp-content/plugins/events-manager/em-actions.php on line 635
+[26-Oct-2014 05:23:52 America/Chicago] PHP Fatal error:  Call to undefined function add_action() in /home1/oraplay/public_html/wp-content/plugins/events-manager/em-actions.php on line 635
+[26-Oct-2014 05:23:52 America/Chicago] PHP Fatal error:  Call to undefined function add_action() in /home1/oraplay/public_html/wp-content/plugins/events-manager/em-actions.php on line 635
+[26-Oct-2014 05:23:52 America/Chicago] PHP Fatal error:  Call to undefined function add_action() in /home1/oraplay/public_html/wp-content/plugins/events-manager/em-actions.php on line 635
+[26-Oct-2014 05:35:06 America/Chicago] PHP Fatal error:  Call to undefined function add_action() in /home1/oraplay/public_html/wp-content/plugins/events-manager/em-actions.php on line 635
+[08-Jan-2015 10:43:22 America/Chicago] PHP Fatal error:  Call to undefined function add_action() in /home1/oraplay/public_html/wp-content/plugins/events-manager/em-actions.php on line 635
+[08-Jan-2015 10:43:22 America/Chicago] PHP Fatal error:  Call to undefined function add_action() in /home1/oraplay/public_html/wp-content/plugins/events-manager/em-actions.php on line 635
+[08-Jan-2015 10:43:22 America/Chicago] PHP Fatal error:  Call to undefined function add_action() in /home1/oraplay/public_html/wp-content/plugins/events-manager/em-actions.php on line 635
+[08-Jan-2015 10:43:22 America/Chicago] PHP Fatal error:  Call to undefined function add_action() in /home1/oraplay/public_html/wp-content/plugins/events-manager/em-actions.php on line 635
+[08-Jan-2015 10:43:22 America/Chicago] PHP Fatal error:  Call to undefined function add_action() in /home1/oraplay/public_html/wp-content/plugins/events-manager/em-actions.php on line 635
+[08-Jan-2015 10:43:25 America/Chicago] PHP Fatal error:  Call to undefined function add_action() in /home1/oraplay/public_html/wp-content/plugins/events-manager/em-actions.php on line 635
+[08-Jan-2015 10:43:25 America/Chicago] PHP Fatal error:  Call to undefined function add_action() in /home1/oraplay/public_html/wp-content/plugins/events-manager/em-actions.php on line 635
+[08-Jan-2015 10:43:25 America/Chicago] PHP Fatal error:  Call to undefined function add_action() in /home1/oraplay/public_html/wp-content/plugins/events-manager/em-actions.php on line 635
+[08-Jan-2015 10:43:25 America/Chicago] PHP Fatal error:  Call to undefined function add_action() in /home1/oraplay/public_html/wp-content/plugins/events-manager/em-actions.php on line 635
+[08-Jan-2015 10:54:57 America/Chicago] PHP Fatal error:  Call to undefined function add_action() in /home1/oraplay/public_html/wp-content/plugins/events-manager/em-actions.php on line 635
+[16-Jan-2015 06:26:59 America/Chicago] PHP Fatal error:  Call to undefined function add_action() in /home1/oraplay/public_html/wp-content/plugins/events-manager/em-actions.php on line 635
+[16-Jan-2015 06:26:59 America/Chicago] PHP Fatal error:  Call to undefined function add_action() in /home1/oraplay/public_html/wp-content/plugins/events-manager/em-actions.php on line 635
+[16-Jan-2015 06:27:05 America/Chicago] PHP Fatal error:  Call to undefined function add_action() in /home1/oraplay/public_html/wp-content/plugins/events-manager/em-actions.php on line 635
+[16-Jan-2015 06:27:05 America/Chicago] PHP Fatal error:  Call to undefined function add_action() in /home1/oraplay/public_html/wp-content/plugins/events-manager/em-actions.php on line 635
+[16-Jan-2015 06:27:07 America/Chicago] PHP Fatal error:  Call to undefined function add_action() in /home1/oraplay/public_html/wp-content/plugins/events-manager/em-actions.php on line 635
+[16-Jan-2015 06:27:07 America/Chicago] PHP Fatal error:  Call to undefined function add_action() in /home1/oraplay/public_html/wp-content/plugins/events-manager/em-actions.php on line 635
+[16-Jan-2015 06:27:07 America/Chicago] PHP Fatal error:  Call to undefined function add_action() in /home1/oraplay/public_html/wp-content/plugins/events-manager/em-actions.php on line 635
+[16-Jan-2015 06:27:08 America/Chicago] PHP Fatal error:  Call to undefined function add_action() in /home1/oraplay/public_html/wp-content/plugins/events-manager/em-actions.php on line 635
+[16-Jan-2015 06:27:08 America/Chicago] PHP Fatal error:  Call to undefined function add_action() in /home1/oraplay/public_html/wp-content/plugins/events-manager/em-actions.php on line 635
+[16-Jan-2015 06:27:08 America/Chicago] PHP Fatal error:  Call to undefined function add_action() in /home1/oraplay/public_html/wp-content/plugins/events-manager/em-actions.php on line 635
+[22-Feb-2015 05:31:43 America/Chicago] PHP Fatal error:  Call to undefined function add_action() in /home1/oraplay/public_html/wp-content/plugins/events-manager/em-actions.php on line 635
+[22-Feb-2015 05:31:43 America/Chicago] PHP Fatal error:  Call to undefined function add_action() in /home1/oraplay/public_html/wp-content/plugins/events-manager/em-actions.php on line 635
+[22-Feb-2015 05:31:43 America/Chicago] PHP Fatal error:  Call to undefined function add_action() in /home1/oraplay/public_html/wp-content/plugins/events-manager/em-actions.php on line 635
+[22-Feb-2015 05:31:43 America/Chicago] PHP Fatal error:  Call to undefined function add_action() in /home1/oraplay/public_html/wp-content/plugins/events-manager/em-actions.php on line 635
+[22-Feb-2015 05:31:43 America/Chicago] PHP Fatal error:  Call to undefined function add_action() in /home1/oraplay/public_html/wp-content/plugins/events-manager/em-actions.php on line 635
+[22-Feb-2015 05:31:44 America/Chicago] PHP Fatal error:  Call to undefined function add_action() in /home1/oraplay/public_html/wp-content/plugins/events-manager/em-actions.php on line 635
+[22-Feb-2015 05:31:44 America/Chicago] PHP Fatal error:  Call to undefined function add_action() in /home1/oraplay/public_html/wp-content/plugins/events-manager/em-actions.php on line 635
+[22-Feb-2015 05:31:44 America/Chicago] PHP Fatal error:  Call to undefined function add_action() in /home1/oraplay/public_html/wp-content/plugins/events-manager/em-actions.php on line 635
+[06-Mar-2015 06:47:07 America/Chicago] PHP Fatal error:  Call to undefined function add_action() in /home1/oraplay/public_html/wp-content/plugins/events-manager/em-actions.php on line 635
+[06-Mar-2015 06:47:08 America/Chicago] PHP Fatal error:  Call to undefined function add_action() in /home1/oraplay/public_html/wp-content/plugins/events-manager/em-actions.php on line 635
+[06-Mar-2015 06:47:08 America/Chicago] PHP Fatal error:  Call to undefined function add_action() in /home1/oraplay/public_html/wp-content/plugins/events-manager/em-actions.php on line 635
+[06-Mar-2015 06:47:08 America/Chicago] PHP Fatal error:  Call to undefined function add_action() in /home1/oraplay/public_html/wp-content/plugins/events-manager/em-actions.php on line 635
+[06-Mar-2015 06:47:09 America/Chicago] PHP Fatal error:  Call to undefined function add_action() in /home1/oraplay/public_html/wp-content/plugins/events-manager/em-actions.php on line 635
+[06-Mar-2015 06:47:09 America/Chicago] PHP Fatal error:  Call to undefined function add_action() in /home1/oraplay/public_html/wp-content/plugins/events-manager/em-actions.php on line 635
+[06-Mar-2015 06:47:10 America/Chicago] PHP Fatal error:  Call to undefined function add_action() in /home1/oraplay/public_html/wp-content/plugins/events-manager/em-actions.php on line 635
+[09-Apr-2015 18:58:27 America/Chicago] PHP Fatal error:  Call to undefined function add_action() in /home1/oraplay/public_html/wp-content/plugins/events-manager/em-actions.php on line 635
+[09-Apr-2015 18:58:27 America/Chicago] PHP Fatal error:  Call to undefined function add_action() in /home1/oraplay/public_html/wp-content/plugins/events-manager/em-actions.php on line 635
+[09-Apr-2015 18:58:28 America/Chicago] PHP Fatal error:  Call to undefined function add_action() in /home1/oraplay/public_html/wp-content/plugins/events-manager/em-actions.php on line 635
+[09-Apr-2015 18:58:30 America/Chicago] PHP Fatal error:  Call to undefined function add_action() in /home1/oraplay/public_html/wp-content/plugins/events-manager/em-actions.php on line 635
+[09-Apr-2015 18:58:30 America/Chicago] PHP Fatal error:  Call to undefined function add_action() in /home1/oraplay/public_html/wp-content/plugins/events-manager/em-actions.php on line 635
+[09-Apr-2015 18:58:30 America/Chicago] PHP Fatal error:  Call to undefined function add_action() in /home1/oraplay/public_html/wp-content/plugins/events-manager/em-actions.php on line 635
+[09-Apr-2015 18:58:33 America/Chicago] PHP Fatal error:  Call to undefined function add_action() in /home1/oraplay/public_html/wp-content/plugins/events-manager/em-actions.php on line 635
+[09-Apr-2015 18:58:34 America/Chicago] PHP Fatal error:  Call to undefined function add_action() in /home1/oraplay/public_html/wp-content/plugins/events-manager/em-actions.php on line 635
+[09-Apr-2015 18:58:34 America/Chicago] PHP Fatal error:  Call to undefined function add_action() in /home1/oraplay/public_html/wp-content/plugins/events-manager/em-actions.php on line 635
+[09-Apr-2015 18:59:20 America/Chicago] PHP Fatal error:  Call to undefined function add_action() in /home1/oraplay/public_html/wp-content/plugins/events-manager/em-actions.php on line 635
+[23-May-2015 10:28:49 America/Chicago] PHP Fatal error:  Call to undefined function add_action() in /home1/oraplay/public_html/wp-content/plugins/events-manager/em-actions.php on line 635
+[23-May-2015 10:28:49 America/Chicago] PHP Fatal error:  Call to undefined function add_action() in /home1/oraplay/public_html/wp-content/plugins/events-manager/em-actions.php on line 635
+[23-May-2015 10:28:49 America/Chicago] PHP Fatal error:  Call to undefined function add_action() in /home1/oraplay/public_html/wp-content/plugins/events-manager/em-actions.php on line 635
+[23-May-2015 10:28:49 America/Chicago] PHP Fatal error:  Call to undefined function add_action() in /home1/oraplay/public_html/wp-content/plugins/events-manager/em-actions.php on line 635
+[23-May-2015 10:28:49 America/Chicago] PHP Fatal error:  Call to undefined function add_action() in /home1/oraplay/public_html/wp-content/plugins/events-manager/em-actions.php on line 635
+[23-May-2015 10:28:50 America/Chicago] PHP Fatal error:  Call to undefined function add_action() in /home1/oraplay/public_html/wp-content/plugins/events-manager/em-actions.php on line 635
+[23-May-2015 10:32:17 America/Chicago] PHP Fatal error:  Call to undefined function add_action() in /home1/oraplay/public_html/wp-content/plugins/events-manager/em-actions.php on line 635

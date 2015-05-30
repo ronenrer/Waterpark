@@ -1,0 +1,54 @@
+[07-Nov-2013 17:40:13] PHP Fatal error:  Class 'EM_Object' not found in /home1/oraplay/public_html/AURAPLAYER.COM/wp-content/plugins/events-manager/classes/em-people.php on line 2
+[07-Nov-2013 17:40:19] PHP Fatal error:  Class 'EM_Object' not found in /home1/oraplay/public_html/AURAPLAYER.COM/wp-content/plugins/events-manager/classes/em-categories.php on line 2
+[07-Nov-2013 17:40:21] PHP Fatal error:  Call to undefined function  add_action() in /home1/oraplay/public_html/AURAPLAYER.COM/wp-content/plugins/events-manager/classes/em-categories-taxonomy.php on line 126
+[07-Nov-2013 17:40:59] PHP Fatal error:  Class 'EM_Object' not found in /home1/oraplay/public_html/AURAPLAYER.COM/wp-content/plugins/events-manager/classes/em-category.php on line 23
+[07-Nov-2013 17:41:01] PHP Fatal error:  Call to undefined function  add_filter() in /home1/oraplay/public_html/AURAPLAYER.COM/wp-content/plugins/events-manager/classes/em-permalinks.php on line 17
+[07-Nov-2013 17:41:01] PHP Fatal error:  Class 'EM_Object' not found in /home1/oraplay/public_html/AURAPLAYER.COM/wp-content/plugins/events-manager/classes/em-bookings.php on line 7
+[07-Nov-2013 17:41:03] PHP Fatal error:  Class 'EM_Object' not found in /home1/oraplay/public_html/AURAPLAYER.COM/wp-content/plugins/events-manager/classes/em-tickets-bookings.php on line 7
+[07-Nov-2013 17:41:05] PHP Fatal error:  Class 'EM_Object' not found in /home1/oraplay/public_html/AURAPLAYER.COM/wp-content/plugins/events-manager/classes/em-calendar.php on line 2
+[07-Nov-2013 17:41:07] PHP Fatal error:  Call to undefined function  add_action() in /home1/oraplay/public_html/AURAPLAYER.COM/wp-content/plugins/events-manager/classes/em-event-post-admin.php on line 290
+[07-Nov-2013 17:41:08] PHP Fatal error:  Class 'EM_Object' not found in /home1/oraplay/public_html/AURAPLAYER.COM/wp-content/plugins/events-manager/classes/em-tickets.php on line 7
+[07-Nov-2013 17:41:09] PHP Fatal error:  Class 'WP_User' not found in /home1/oraplay/public_html/AURAPLAYER.COM/wp-content/plugins/events-manager/classes/em-person.php on line 3
+[07-Nov-2013 17:41:10] PHP Fatal error:  Call to undefined function  is_admin() in /home1/oraplay/public_html/AURAPLAYER.COM/wp-content/plugins/events-manager/classes/em-category-taxonomy.php on line 4
+[07-Nov-2013 17:41:12] PHP Fatal error:  Class 'EM_Object' not found in /home1/oraplay/public_html/AURAPLAYER.COM/wp-content/plugins/events-manager/classes/em-ticket-booking.php on line 2
+[07-Nov-2013 17:41:13] PHP Fatal error:  Class 'EM_Object' not found in /home1/oraplay/public_html/AURAPLAYER.COM/wp-content/plugins/events-manager/classes/em-booking.php on line 31
+[07-Nov-2013 17:41:14] PHP Fatal error:  Class 'EM_Object' not found in /home1/oraplay/public_html/AURAPLAYER.COM/wp-content/plugins/events-manager/classes/em-locations.php on line 7
+[07-Nov-2013 17:41:16] PHP Fatal error:  Class 'EM_Object' not found in /home1/oraplay/public_html/AURAPLAYER.COM/wp-content/plugins/events-manager/classes/em-location.php on line 19
+[07-Nov-2013 17:41:17] PHP Fatal error:  Class 'EM_Object' not found in /home1/oraplay/public_html/AURAPLAYER.COM/wp-content/plugins/events-manager/classes/em-ticket.php on line 2
+[07-Nov-2013 17:41:18] PHP Fatal error:  Class 'EM_Object' not found in /home1/oraplay/public_html/AURAPLAYER.COM/wp-content/plugins/events-manager/classes/em-tag.php on line 23
+[07-Nov-2013 17:41:20] PHP Fatal error:  Class 'EM_Object' not found in /home1/oraplay/public_html/AURAPLAYER.COM/wp-content/plugins/events-manager/classes/em-event.php on line 39
+[07-Nov-2013 17:41:22] PHP Fatal error:  Call to undefined function  is_admin() in /home1/oraplay/public_html/AURAPLAYER.COM/wp-content/plugins/events-manager/classes/em-tag-taxonomy.php on line 4
+[07-Nov-2013 17:41:22] PHP Fatal error:  Class 'EM_Object' not found in /home1/oraplay/public_html/AURAPLAYER.COM/wp-content/plugins/events-manager/classes/em-events.php on line 7
+[07-Nov-2013 17:41:23] PHP Fatal error:  Call to undefined function  add_action() in /home1/oraplay/public_html/AURAPLAYER.COM/wp-content/plugins/events-manager/classes/em-event-posts-admin.php on line 187
+[07-Nov-2013 17:41:25] PHP Fatal error:  Call to undefined function  is_admin() in /home1/oraplay/public_html/AURAPLAYER.COM/wp-content/plugins/events-manager/classes/em-event-post.php on line 11
+[07-Nov-2013 17:41:26] PHP Fatal error:  Call to undefined function  is_admin() in /home1/oraplay/public_html/AURAPLAYER.COM/wp-content/plugins/events-manager/classes/em-location-post.php on line 5
+[07-Nov-2013 17:41:27] PHP Fatal error:  Call to undefined function  add_action() in /home1/oraplay/public_html/AURAPLAYER.COM/wp-content/plugins/events-manager/classes/em-notices.php on line 237
+[07-Nov-2013 17:41:29] PHP Fatal error:  Class 'EM_Object' not found in /home1/oraplay/public_html/AURAPLAYER.COM/wp-content/plugins/events-manager/classes/em-tags.php on line 2
+[17-Feb-2014 12:39:05] PHP Fatal error:  Class 'EM_Object' not found in /home1/oraplay/public_html/wp-content/plugins/events-manager/classes/em-people.php on line 2
+[17-Feb-2014 12:39:11] PHP Fatal error:  Class 'EM_Object' not found in /home1/oraplay/public_html/wp-content/plugins/events-manager/classes/em-bookings.php on line 7
+[17-Feb-2014 12:39:17] PHP Fatal error:  Call to undefined function  add_action() in /home1/oraplay/public_html/wp-content/plugins/events-manager/classes/em-categories-taxonomy.php on line 126
+[17-Feb-2014 12:39:18] PHP Fatal error:  Class 'EM_Object' not found in /home1/oraplay/public_html/wp-content/plugins/events-manager/classes/em-categories.php on line 2
+[17-Feb-2014 12:39:19] PHP Fatal error:  Call to undefined function  is_admin() in /home1/oraplay/public_html/wp-content/plugins/events-manager/classes/em-event-post.php on line 11
+[17-Feb-2014 12:39:21] PHP Fatal error:  Call to undefined function  is_admin() in /home1/oraplay/public_html/wp-content/plugins/events-manager/classes/em-location-post.php on line 5
+[17-Feb-2014 12:39:22] PHP Fatal error:  Call to undefined function  add_action() in /home1/oraplay/public_html/wp-content/plugins/events-manager/classes/em-notices.php on line 237
+[17-Feb-2014 12:39:23] PHP Fatal error:  Class 'EM_Object' not found in /home1/oraplay/public_html/wp-content/plugins/events-manager/classes/em-tags.php on line 2
+[17-Feb-2014 12:39:25] PHP Fatal error:  Call to undefined function  add_action() in /home1/oraplay/public_html/wp-content/plugins/events-manager/classes/em-event-post-admin.php on line 290
+[17-Feb-2014 12:39:28] PHP Fatal error:  Class 'EM_Object' not found in /home1/oraplay/public_html/wp-content/plugins/events-manager/classes/em-calendar.php on line 2
+[17-Feb-2014 12:39:29] PHP Fatal error:  Call to undefined function  add_action() in /home1/oraplay/public_html/wp-content/plugins/events-manager/classes/em-event-posts-admin.php on line 187
+[17-Feb-2014 12:39:31] PHP Fatal error:  Class 'EM_Object' not found in /home1/oraplay/public_html/wp-content/plugins/events-manager/classes/em-tickets-bookings.php on line 7
+[17-Feb-2014 12:39:34] PHP Fatal error:  Class 'EM_Object' not found in /home1/oraplay/public_html/wp-content/plugins/events-manager/classes/em-booking.php on line 31
+[17-Feb-2014 12:39:35] PHP Fatal error:  Class 'EM_Object' not found in /home1/oraplay/public_html/wp-content/plugins/events-manager/classes/em-locations.php on line 7
+[17-Feb-2014 12:39:36] PHP Fatal error:  Class 'EM_Object' not found in /home1/oraplay/public_html/wp-content/plugins/events-manager/classes/em-location.php on line 19
+[17-Feb-2014 12:39:38] PHP Fatal error:  Class 'EM_Object' not found in /home1/oraplay/public_html/wp-content/plugins/events-manager/classes/em-ticket.php on line 2
+[17-Feb-2014 12:39:39] PHP Fatal error:  Class 'EM_Object' not found in /home1/oraplay/public_html/wp-content/plugins/events-manager/classes/em-tag.php on line 23
+[17-Feb-2014 12:39:42] PHP Fatal error:  Class 'EM_Object' not found in /home1/oraplay/public_html/wp-content/plugins/events-manager/classes/em-event.php on line 39
+[17-Feb-2014 12:39:44] PHP Fatal error:  Call to undefined function  is_admin() in /home1/oraplay/public_html/wp-content/plugins/events-manager/classes/em-tag-taxonomy.php on line 4
+[17-Feb-2014 12:39:46] PHP Fatal error:  Call to undefined function  add_filter() in /home1/oraplay/public_html/wp-content/plugins/events-manager/classes/em-permalinks.php on line 17
+[17-Feb-2014 12:39:47] PHP Fatal error:  Class 'EM_Object' not found in /home1/oraplay/public_html/wp-content/plugins/events-manager/classes/em-events.php on line 7
+[17-Feb-2014 12:39:49] PHP Fatal error:  Class 'EM_Object' not found in /home1/oraplay/public_html/wp-content/plugins/events-manager/classes/em-ticket-booking.php on line 2
+[17-Feb-2014 12:39:50] PHP Fatal error:  Class 'EM_Object' not found in /home1/oraplay/public_html/wp-content/plugins/events-manager/classes/em-category.php on line 23
+[17-Feb-2014 12:39:52] PHP Fatal error:  Call to undefined function  add_action() in /home1/oraplay/public_html/wp-content/plugins/events-manager/classes/em-location-posts-admin.php on line 84
+[17-Feb-2014 12:39:53] PHP Fatal error:  Call to undefined function  is_admin() in /home1/oraplay/public_html/wp-content/plugins/events-manager/classes/em-category-taxonomy.php on line 4
+[17-Feb-2014 12:39:54] PHP Fatal error:  Class 'EM_Object' not found in /home1/oraplay/public_html/wp-content/plugins/events-manager/classes/em-tickets.php on line 7
+[17-Feb-2014 12:39:55] PHP Fatal error:  Class 'WP_User' not found in /home1/oraplay/public_html/wp-content/plugins/events-manager/classes/em-person.php on line 3
+[17-Feb-2014 12:39:56] PHP Fatal error:  Call to undefined function  add_action() in /home1/oraplay/public_html/wp-content/plugins/events-manager/classes/em-location-post-admin.php on line 171
