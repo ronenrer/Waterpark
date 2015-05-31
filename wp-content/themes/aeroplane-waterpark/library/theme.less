@@ -50,6 +50,10 @@
 
 // Custom CSS
 @import url(http://fonts.googleapis.com/earlyaccess/alefhebrew.css);
+.col-xs-1, .col-xs-10, .col-xs-11, .col-xs-12, .col-xs-2, .col-xs-3, .col-xs-4, .col-xs-5, .col-xs-6, .col-xs-7, .col-xs-8, .col-xs-9{
+	float:right;
+}
+.row.nomargin{margin:0;}
 body{
 	background:#fff;
 }
@@ -107,23 +111,48 @@ img{max-width:100%;}
 .home .article-footer{
 	margin-top:10px;
 }
-.home-bottom{margin-top:40px;}
+.home-bottom{
+	margin-top:40px;
+	.instagram .widgettitle{
+	  	margin-top:0;
+	  	padding:12px 0;
+	  }
+ }
 .sidebar{padding:0}
-.awesome-weather-wrap{
-	width:50%;
-	float:left;
-	border:1px solid #fff;
+.current-info ,.weather{padding:0;height:92px;}
+.current-info{
+	background:@brand-primary;
+	text-align:center;
+	color:@brand-accent-light;
+	font-size:@font-size-h3;
 }
-.awesome-weather-header{display:none}
-.widgettitle{
-	font-size:32px;
-	color:@brand-primary;
-	border-top:2px solid @brand-accent-light;
-	padding:20px 0;
-	line-height:1;
-	margin-bottom:0;
+.awesome-weather-wrap{
+	border-right:1px solid #fff;
+	height:100%;
+	.awesome-weather-current-temp{
+		font-size:@font-size-h2;
+		height:100%;
+		color:@brand-accent-light;
+		font-family: 'Alef Hebrew';
+		sup{
+			font-size:@font-size-small
+		}
 	}
+}
+.awesome-weather-header,.awesome-weather-forecast{display:none}
+.sidebar ,.home-bottom{
+	.widgettitle{
+		font-size:32px;
+		color:@brand-primary;
+		border-top:2px solid @brand-accent-light;
+		padding:20px 0;
+		line-height:1;
+		margin-bottom:0;
+	}
+}
+
 .sidebar .spider_calendar{
+	border-top:1px solid #fff;
 	.calbg{
 		background:@brand-dark;
 		background-image: none !important;
@@ -156,11 +185,50 @@ img{max-width:100%;}
 	#inner-footer{
 		padding:20px;
 		a{color:#fff;}
+		[class^=col-]:nth-child(3){clear:right}
+	}
+	.menu {
+		padding-right:0;
+		li{
+			list-style: none;
+		}
 	}
 }
 .top-footer{
 	background:@brand-dark;
-	height:40px;
+	height:52px;
+	.nav>li>a{
+		color:@brand-accent-light;
+		font-size:@font-size-large;
+		padding:0 15px;
+		line-height:52px;
+	}
+	
+}
+/*******************
+PAGES
+********************/
+.article-header{
+	height:275px;
+	background:url('../images/page-title-bg.jpg');
+	background-size: cover;
+	position:relative;
+	&:before{
+		content:'';
+		position: absolute;
+		width:100%;
+		height:100%;
+		background: rgba(0,0,0,0.3);
+	}
+	.page-title{
+		position:absolute;
+		font-size:@font-size-h1;
+		font-weight:700;
+		color:#fff;
+		bottom:20px;
+		right:20px;
+		margin:0;
+	}
 }
 @media (min-width: @grid-float-breakpoint){
   	.col-sm-1, .col-sm-10, .col-sm-11, .col-sm-12, .col-sm-2, .col-sm-3, .col-sm-4, .col-sm-5, .col-sm-6, 
@@ -186,6 +254,7 @@ img{max-width:100%;}
 		right:20px;
 		top:0;
 		padding:0;
+		z-index:1
 	}
 	
 	#inner-content{padding-top:40px;}
@@ -202,18 +271,26 @@ img{max-width:100%;}
 	.main-features .col-md-6:nth-child(2n+2){
 		padding-right:9px;
 	}
+
+.footer	#inner-footer{
+		[class^=col-]:nth-child(3){clear:none}
+	  	.col-sm-4{width:40%;}
+	  	.col-sm-2{
+	  		width:16%;
+	  		&.contact-info{width:28%}
+	  	}
+	  	#widget_sp_image-3{margin-right:-35px;}
+  	} 
   }
-  .instagram .widgettitle{
-  	margin-top:0;
-  	padding:12px 0;
-  }
+  
+  
 @media (min-width: @screen-md){
  	.col-md-1, .col-md-10, .col-md-11, .col-md-12, .col-md-2, .col-md-3, .col-md-4, .col-md-5, .col-md-6, 
  	.col-md-7, .col-md-8, .col-md-9{
  		float:right;
  	}
+ 	.navbar-nav{float:right;}
  	ul#menu-main{
-		float:right;
 		padding-right:20%;
 		margin:20px 0;
 		> li{

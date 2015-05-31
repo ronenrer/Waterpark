@@ -72,30 +72,6 @@ You can change the names and dimensions to whatever
 you like. Enjoy!
 */
 
-remove_action( 'woocommerce_before_main_content', 'woocommerce_output_content_wrapper', 10);
-remove_action( 'woocommerce_after_main_content', 'woocommerce_output_content_wrapper_end', 10);
-
-add_action('woocommerce_before_main_content', 'my_theme_wrapper_start', 10);
-add_action('woocommerce_after_main_content', 'my_theme_wrapper_end', 10);
-
-function my_theme_wrapper_start() {
-  echo '<div id="content">
-			<div id="inner-content" class="wrap clearfix">
-				<div id="main" class="eightcol first clearfix" role="main">
-					<article role="article" itemscope itemtype="http://schema.org/BlogPosting">
-						<section class="entry-content clearfix" itemprop="articleBody">';
-}
-
-function my_theme_wrapper_end() {
-echo '						</section>
-					</article>
-				</div>';
-				get_sidebar();
-echo '		</div>
-		</div>';
-}
-
-add_theme_support( 'woocommerce' );
 
 /************* ACTIVE SIDEBARS ********************/
 
@@ -111,30 +87,43 @@ function bones_register_sidebars() {
 		'after_title' => '</h4>',
 	 ));
 
-	/*
-	to add more sidebars or widgetized areas, just copy
-	and edit the above sidebar code. In order to call
-	your new sidebar just use the following code:
-
-	Just change the name to whatever your new
-	sidebar's id is, for example:
-
 	register_sidebar(array(
-		'id' => 'sidebar2',
-		'name' => __( 'Sidebar 2', 'bonestheme' ),
-		'description' => __( 'The second (secondary) sidebar.', 'bonestheme' ),
+		'id' => 'footer1',
+		'name' => __( 'Footer Column  1', 'bonestheme' ),
+		'description' => __( 'Footer Column 1 Widgets.', 'bonestheme' ),
+		'before_widget' => '<div id="%1$s" class="widget %2$s">',
+		'after_widget' => '</div>',
+		'before_title' => '<h4 class="widgettitle">',
+		'after_title' => '</h4>',
+	));
+	register_sidebar(array(
+		'id' => 'footer2',
+		'name' => __( 'Footer Column  2', 'bonestheme' ),
+		'description' => __( 'Footer Column 2 Widgets.', 'bonestheme' ),
+		'before_widget' => '<div id="%1$s" class="widget %2$s">',
+		'after_widget' => '</div>',
+		'before_title' => '<h4 class="widgettitle">',
+		'after_title' => '</h4>',
+	));
+	register_sidebar(array(
+		'id' => 'footer3',
+		'name' => __( 'Footer Column  3', 'bonestheme' ),
+		'description' => __( 'Footer Column 3 Widgets.', 'bonestheme' ),
+		'before_widget' => '<div id="%1$s" class="widget %2$s">',
+		'after_widget' => '</div>',
+		'before_title' => '<h4 class="widgettitle">',
+		'after_title' => '</h4>',
+	));
+	register_sidebar(array(
+		'id' => 'footer4',
+		'name' => __( 'Footer Column  4', 'bonestheme' ),
+		'description' => __( 'Footer Column 4 Widgets.', 'bonestheme' ),
 		'before_widget' => '<div id="%1$s" class="widget %2$s">',
 		'after_widget' => '</div>',
 		'before_title' => '<h4 class="widgettitle">',
 		'after_title' => '</h4>',
 	));
 
-	To call the sidebar in your template, you can just copy
-	the sidebar.php file and rename it to your sidebar's name.
-	So using the above example, it would be:
-	sidebar-sidebar2.php
-
-	*/
 } // don't remove this bracket!
 
 /************* COMMENT LAYOUT *********************/

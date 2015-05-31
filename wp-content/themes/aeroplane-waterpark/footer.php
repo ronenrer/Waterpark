@@ -9,8 +9,8 @@
 								'depth'             => 2,
 								'container'         => 'div',
 								'container_id'   	=>	'navbar' ,
-								'container_class'   => 'nav-justified',
-								'menu_class'        => 'nav navbar-nav',
+								'container_class'   => '',
+								'menu_class'        => 'nav nav-justified',
 								'fallback_cb'       => 'wp_bootstrap_navwalker::fallback',
 								'walker'            => new wp_bootstrap_navwalker())
 							);
@@ -19,8 +19,20 @@
 					</div>
 				</div>
 				<div id="inner-footer" class="wrap clearfix">
-
-					
+					<div class="row">
+						<div class="col-xs-6 col-sm-4">
+							<?php dynamic_sidebar( 'footer1' ); ?>
+						</div>
+						<div class="col-xs-6 col-sm-2 contact-info">
+							<?php dynamic_sidebar( 'footer2' ); ?>
+						</div>
+						<div class="col-xs-6 col-sm-2">
+							<?php dynamic_sidebar( 'footer3' ); ?>
+						</div>
+						<div class="col-xs-6 col-sm-2">
+							<?php dynamic_sidebar( 'footer4' ); ?>
+						</div>
+					</div>				
 
 					<p class="source-org copyright">&copy; <?php echo date('Y'); ?> <?php bloginfo( 'name' ); ?>.</p>
 

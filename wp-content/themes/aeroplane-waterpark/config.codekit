@@ -1,6 +1,6 @@
 {
 "CodeKitInfo": "This is a CodeKit 2.x project configuration file. It is designed to sync project settings across multiple machines. MODIFYING THE CONTENTS OF THIS FILE IS A POOR LIFE DECISION. If you do so, you will likely cause CodeKit to crash. This file is not useful unless accompanied by the project that created it in CodeKit 2. This file is not backwards-compatible with CodeKit 1.x. For more information, see: http:\/\/incident57.com\/codekit",
-"creatorBuild": "19033",
+"creatorBuild": "18966",
 "files": {
 	"\/404.php": {
 		"fileType": 8192,
@@ -1402,7 +1402,7 @@
 		"outputAbbreviatedPath": "\/library\/css\/theme.css",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
-		"outputStyle": 1,
+		"outputStyle": 2,
 		"relativeURLS": 0,
 		"shouldRunAutoprefixer": 0,
 		"shouldRunBless": 0,
@@ -1608,6 +1608,17 @@
 		"outputPathIsSetByUser": 0,
 		"processed": 0
 		},
+	"\/library\/images\/clock.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 1605,
+		"inputAbbreviatedPath": "\/library\/images\/clock.png",
+		"outputAbbreviatedPath": "\/library\/images\/clock.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
 	"\/library\/images\/custom-post-icon.png": {
 		"fileType": 32768,
 		"ignore": 0,
@@ -1619,6 +1630,17 @@
 		"outputPathIsSetByUser": 0,
 		"processed": 0
 		},
+	"\/library\/images\/directions.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 1372,
+		"inputAbbreviatedPath": "\/library\/images\/directions.png",
+		"outputAbbreviatedPath": "\/library\/images\/directions.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
 	"\/library\/images\/discounts.jpg": {
 		"fileType": 16384,
 		"ignore": 0,
@@ -1626,6 +1648,17 @@
 		"initialSize": 31150,
 		"inputAbbreviatedPath": "\/library\/images\/discounts.jpg",
 		"outputAbbreviatedPath": "\/library\/images\/discounts.jpg",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/library\/images\/family1.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 97412,
+		"inputAbbreviatedPath": "\/library\/images\/family1.png",
+		"outputAbbreviatedPath": "\/library\/images\/family1.png",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"processed": 0
@@ -1648,6 +1681,28 @@
 		"initialSize": 16265,
 		"inputAbbreviatedPath": "\/library\/images\/home_banner.jpg",
 		"outputAbbreviatedPath": "\/library\/images\/home_banner.jpg",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/library\/images\/icon-map.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 1814,
+		"inputAbbreviatedPath": "\/library\/images\/icon-map.png",
+		"outputAbbreviatedPath": "\/library\/images\/icon-map.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/library\/images\/icon-tickets.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 868,
+		"inputAbbreviatedPath": "\/library\/images\/icon-tickets.png",
+		"outputAbbreviatedPath": "\/library\/images\/icon-tickets.png",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"processed": 0
@@ -1692,6 +1747,28 @@
 		"initialSize": 30302,
 		"inputAbbreviatedPath": "\/library\/images\/map.jpg",
 		"outputAbbreviatedPath": "\/library\/images\/map.jpg",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/library\/images\/page-title-bg.jpg": {
+		"fileType": 16384,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 459260,
+		"inputAbbreviatedPath": "\/library\/images\/page-title-bg.jpg",
+		"outputAbbreviatedPath": "\/library\/images\/page-title-bg.jpg",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/library\/images\/prices.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 1541,
+		"inputAbbreviatedPath": "\/library\/images\/prices.png",
+		"outputAbbreviatedPath": "\/library\/images\/prices.png",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"processed": 0
@@ -1816,7 +1893,7 @@
 		"outputAbbreviatedPath": "\/library\/css\/theme.min.css",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 1,
-		"outputStyle": 1,
+		"outputStyle": 2,
 		"relativeURLS": 0,
 		"shouldRunAutoprefixer": 0,
 		"shouldRunBless": 0,
@@ -1951,7 +2028,7 @@
 	},
 "hooks": [
 	],
-"lastSavedByUser": "Ronenrer",
+"lastSavedByUser": "admin",
 "manualImportLinks": {
 	},
 "projectAttributes": {

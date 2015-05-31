@@ -53,15 +53,17 @@
 					<div class="tagline pull-right">עונת 2015 נפתחת! <span>16.5</span></div>
 					<div class="site-phone pull-left">לפרטים והזמנות 09-9595757</div>
 				</div>
-				<div class="navbar-header">
-		          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
-		            <span class="sr-only">Toggle navigation</span>
-		            <span class="icon-bar"></span>
-		            <span class="icon-bar"></span>
-		            <span class="icon-bar"></span>
-		          </button>
-		          <a class="navbar-brand" href="<?php echo home_url(); ?>" rel="nofollow"><img src="<?php echo get_template_directory_uri(); ?>/library/images/logo.png"/></a>
-		        </div>
+				<nav>
+      			  <div class="container-fluid">
+        			  <div class="navbar-header">
+			            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+			              <span class="sr-only">Toggle navigation</span>
+			              <span class="icon-bar"></span>
+			              <span class="icon-bar"></span>
+			              <span class="icon-bar"></span>
+			            </button>
+			              <a class="navbar-brand" href="<?php echo home_url(); ?>" rel="nofollow"><img src="<?php echo get_template_directory_uri(); ?>/library/images/logo.png"/></a>
+			          </div>
 					<?php 
 						wp_nav_menu( array(
 							'menu'              => 'main-nav',
@@ -75,6 +77,8 @@
 							'walker'            => new wp_bootstrap_navwalker())
 						);
 						?>
+					</div><!--/.container-fluid -->
+      			</nav>
 				<div class="tickets-top"><img src="<?php echo get_template_directory_uri(); ?>/library/images/tickets-top.png"/></div>
 			</header>
 			<?php if (is_front_page()):?>				
