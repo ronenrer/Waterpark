@@ -60,7 +60,7 @@ Template Name: Homepage
 							<div class="col-md-7">
 								<div class="instagram pull-right">
 									<h4 class="widgettitle">שפיים באינסטגרם</h4>
-									<img src="<?php echo get_stylesheet_directory_uri()?>/library/images/instagram.jpg"/>
+									<?php echo do_shortcode('[instagram-feed]');?>
 								</div>
 								<img class="pull-left" src="<?php echo get_stylesheet_directory_uri()?>/library/images/girls.jpg"/>
 							</div>

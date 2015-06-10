@@ -33,9 +33,10 @@
 							<?php dynamic_sidebar( 'footer4' ); ?>
 						</div>
 					</div>				
-
-					<p class="source-org copyright">&copy; <?php echo date('Y'); ?> <?php bloginfo( 'name' ); ?>.</p>
-
+					<div class="bottom-footer clearfix">
+						<p class="source-org copyright pull-right">&copy; <?php echo date('Y'); ?> <?php bloginfo( 'name' ); ?></p>
+						<p class="credits pull-left"><img src="<?php echo get_stylesheet_directory_uri()?>/library/images/mt-logo.png"/></p>
+					</div>
 				</div>
 
 			</footer>
