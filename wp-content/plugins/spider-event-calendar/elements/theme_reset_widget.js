@@ -7,6 +7,7 @@ function reset_theme_1() {
     document.getElementById('font_day').value = '';
     document.getElementById('font_weekday').value = '';
     document.getElementById('header_bgcolor').color.fromString('005478');
+	document.getElementById('ev_title_color').color.fromString('005478');
     document.getElementById('footer_bgcolor').color.fromString('E1E1E1');
     document.getElementById('text_color_month').color.fromString('FFFFFF');
     document.getElementById('text_color_week_days').color.fromString('2F647D');
@@ -40,6 +41,7 @@ function reset_theme_1() {
     document.getElementById('popup_width').value = '600';
     document.getElementById('popup_height').value = '500';
     document.getElementById('show_repeat1').checked = true;
+	document.getElementById("show_cat1").checked = true;
     document.getElementById('show_repeat0').checked = false;
     change_width();
   }
@@ -54,6 +56,7 @@ function reset_theme_2() {
     document.getElementById('font_day').value = '';
     document.getElementById('font_weekday').value = '';
     document.getElementById('header_bgcolor').color.fromString('00512F');
+	document.getElementById('ev_title_color').color.fromString('00512F');
     document.getElementById('footer_bgcolor').color.fromString('E1E1E1');
     document.getElementById('text_color_month').color.fromString('FFFFFF');
     document.getElementById('text_color_week_days').color.fromString('37745A');
@@ -87,6 +90,7 @@ function reset_theme_2() {
     document.getElementById('popup_width').value = '600';
     document.getElementById('popup_height').value = '500';
     document.getElementById('show_repeat1').checked = true;
+	document.getElementById("show_cat1").checked = true;
     document.getElementById('show_repeat0').checked = false;
     change_width();
   }
@@ -101,6 +105,7 @@ function reset_theme_3() {
     document.getElementById('font_day').value = '';
     document.getElementById('font_weekday').value = '';
     document.getElementById('header_bgcolor').color.fromString('D57F01');
+	document.getElementById('ev_title_color').color.fromString('15D56F');
     document.getElementById('footer_bgcolor').color.fromString('E1E1E1');
     document.getElementById('text_color_month').color.fromString('FFFFFF');
     document.getElementById('text_color_week_days').color.fromString('E29F3D');
@@ -134,6 +139,7 @@ function reset_theme_3() {
     document.getElementById('popup_width').value = '800';
     document.getElementById('popup_height').value = '500';
     document.getElementById('show_repeat1').checked = true;
+	document.getElementById("show_cat1").checked = true;
     document.getElementById('show_repeat0').checked = false;
     change_width();
   }
@@ -148,6 +154,7 @@ function reset_theme_4() {
     document.getElementById('font_day').value = '';
     document.getElementById('font_weekday').value = '';
     document.getElementById('header_bgcolor').color.fromString('520017');
+	document.getElementById('ev_title_color').color.fromString('520017');
     document.getElementById('footer_bgcolor').color.fromString('E1E1E1');
     document.getElementById('text_color_month').color.fromString('FFFFFF');
     document.getElementById('text_color_week_days').color.fromString('520017');
@@ -171,6 +178,7 @@ function reset_theme_4() {
     document.getElementById('title_font_size').value = '';
     document.getElementById('title_font').value = '';
     document.getElementById('title_style').value = 'normal';
+	document.getElementById("show_cat1").checked = true
     document.getElementById('date_color').color.fromString('262626');
     document.getElementById('date_size').value = '';
     document.getElementById('date_font').value = '';
@@ -181,6 +189,7 @@ function reset_theme_4() {
     document.getElementById('popup_width').value = '600';
     document.getElementById('popup_height').value = '500';
     document.getElementById('show_repeat1').checked = true;
+	document.getElementById("show_cat1").checked = true;
     document.getElementById('show_repeat0').checked = false;
     change_width();
   }
@@ -192,9 +201,11 @@ function reset_theme_5() {
     document.getElementById('week_start_day').value = 'mo';
     document.getElementById('font_year').value = '';
     document.getElementById('font_month').value = '';
+	document.getElementById("show_cat1").checked = true
     document.getElementById('font_day').value = '';
     document.getElementById('font_weekday').value = '';
     document.getElementById('header_bgcolor').color.fromString('FCA1EA');
+	document.getElementById('ev_title_color').color.fromString('FCA1EA');
     document.getElementById('footer_bgcolor').color.fromString('E1E1E1');
     document.getElementById('text_color_month').color.fromString('FFFFFF');
     document.getElementById('text_color_week_days').color.fromString('FCA1EA');
@@ -228,6 +239,7 @@ function reset_theme_5() {
     document.getElementById('popup_width').value = '800';
     document.getElementById('popup_height').value = '500';
     document.getElementById('show_repeat1').checked = true;
+	document.getElementById("show_cat1").checked = true;
     document.getElementById('show_repeat0').checked = false;
     change_width();
   }
@@ -242,6 +254,7 @@ function reset_theme_6() {
     document.getElementById('font_day').value = '';
     document.getElementById('font_weekday').value = '';
     document.getElementById('header_bgcolor').color.fromString('540052');
+	document.getElementById('ev_title_color').color.fromString('540052');
     document.getElementById('footer_bgcolor').color.fromString('E1E1E1');
     document.getElementById('text_color_month').color.fromString('FFFFFF');
     document.getElementById('text_color_week_days').color.fromString('540052');
@@ -275,6 +288,7 @@ function reset_theme_6() {
     document.getElementById('popup_width').value = '800';
     document.getElementById('popup_height').value = '500';
     document.getElementById('show_repeat1').checked = true;
+	document.getElementById("show_cat1").checked = true;
     document.getElementById('show_repeat0').checked = false;
     change_width();
   }

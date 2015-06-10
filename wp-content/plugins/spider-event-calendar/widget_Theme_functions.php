@@ -16,7 +16,7 @@ function show_theme_calendar_widget() {
   $sort["1_or_2"] = "2";
   if (isset($_POST['page_number'])) {
     if (isset($_POST['order_by']) && $_POST['order_by'] != '') {
-      $sort["sortid_by"] =esc_sql( $_POST['order_by']);
+      $sort["sortid_by"] =esc_sql(esc_html(stripslashes( $_POST['order_by'])));
     }
     if (isset($_POST['asc_or_desc']) && ($_POST['asc_or_desc'] == 1)) {
       $sort["custom_style"] = "manage-column column-title sorted asc";
@@ -29,7 +29,7 @@ function show_theme_calendar_widget() {
       $order = "ORDER BY " . $sort["sortid_by"] . " DESC";
     }
     if ($_POST['page_number']) {
-      $limit = ($_POST['page_number'] - 1) * 20;
+      $limit = (esc_sql(esc_html(stripslashes($_POST['page_number']))) - 1) * 20;
     }
     else {
       $limit = 0;
@@ -39,7 +39,7 @@ function show_theme_calendar_widget() {
     $limit = 0;
   }
   if (isset($_POST['search_events_by_title'])) {
-    $search_tag = $_POST['search_events_by_title'];
+    $search_tag = esc_sql(esc_html(stripslashes($_POST['search_events_by_title'])));
   }
   else {
     $search_tag = "";
@@ -334,4 +334,5 @@ function remove_theme_calendar_widget($id) {
     <?php
   }
 }
+
 ?>

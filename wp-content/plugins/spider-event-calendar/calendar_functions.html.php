@@ -126,11 +126,6 @@ function html_show_spider_calendar($rows, $pageNav, $sort) {
           This section allows you to create calendars. You can add unlimited number of calendars.
           <a href="https://web-dorado.com/spider-calendar-wordpress-guide-step-2.html" target="_blank" style="color:blue; text-decoration:none;">More...</a>
         </td>
-        <td colspan="7" align="right" style="font-size:16px;">
-          <a href="https://web-dorado.com/files/fromSpiderCalendarWP.php" target="_blank" style="color:red; text-decoration:none;">
-            <img src="<?php echo plugins_url('images/header.png', __FILE__); ?>" border="0" alt="https://web-dorado.com/files/fromSpiderCalendarWP.php" width="215">
-          </a>
-        </td>
       </tr>
       <tr>
         <td style="width:210px"><h2>Calendar Manager</h2></td>
@@ -151,7 +146,7 @@ function html_show_spider_calendar($rows, $pageNav, $sort) {
       $serch_value = "";
     }
     $serch_fields = '
-      <div class="alignleft actions">
+      <div class="alignleft actions" >
         <label for="search_events_by_title" style="font-size:14px">Title: </label>
         <input type="text" name="search_events_by_title" value="' . $serch_value . '" id="search_events_by_title" onchange="clear_serch_texts()">
       </div>
@@ -161,8 +156,9 @@ function html_show_spider_calendar($rows, $pageNav, $sort) {
         <input type="button" value="Reset" onclick="window.location.href=\'admin.php?page=SpiderCalendar\'" class="button-secondary action">
       </div>';
     print_html_nav($pageNav['total'], $pageNav['limit'], $serch_fields);
+	
     ?>
-    <table class="wp-list-table widefat fixed pages" style="width:99%">
+    <table class="wp-list-table widefat fixed pages" style="width:95%">
       <thead>
       <TR>
         <th scope="col" id="id" class="<?php echo (($sort["sortid_by"] == "id") ? $sort["custom_style"] : $sort["default_style"]); ?>" style="width:50px">
@@ -229,15 +225,13 @@ function html_add_spider_calendar() {
         return;
       }
       submitform(pressbutton);
+	 
     }
+	
+	
     function submitform(pressbutton) {
       document.getElementById('adminForm').action = document.getElementById('adminForm').action + "&task=" + pressbutton;
-	  if (document.getElementById('title').value == "") {
-					alert('Provide calendar title:');
-				  }
-				  else {
       document.getElementById('adminForm').submit();
-	  }
     }
     function doNothing() {
       var keyCode = event.keyCode ? event.keyCode : event.which ? event.which : event.charCode;
@@ -272,11 +266,6 @@ function html_add_spider_calendar() {
         <br />
         This section allows you to create calendars. You can add unlimited number of calendars.
         <a href="https://web-dorado.com/spider-calendar-wordpress-guide-step-2.html" target="_blank" style="color:blue; text-decoration:none;">More...</a>
-      </td>
-      <td colspan="7" align="right" style="font-size:16px;">
-        <a href="https://web-dorado.com/files/fromSpiderCalendarWP.php" target="_blank" style="color:red; text-decoration:none;">
-          <img src="<?php echo plugins_url('images/header.png', __FILE__); ?>" border="0" alt="https://web-dorado.com/files/fromSpiderCalendarWP.php" width="215">
-        </a>
       </td>
     </tr>
     <tr>
@@ -367,12 +356,7 @@ function html_edit_spider_calendar($row) {
     }
     function submitform(pressbutton) {
       document.getElementById('adminForm').action = document.getElementById('adminForm').action + "&task=" + pressbutton;
-	  if (document.getElementById('title').value == "") {
-					alert('Provide calendar title:');
-				  }
-				  else {
       document.getElementById('adminForm').submit();
-	  }
     }    
     function doNothing() {
       var keyCode = event.keyCode ? event.keyCode : event.which ? event.which : event.charCode;
@@ -407,11 +391,6 @@ function html_edit_spider_calendar($row) {
         <br />
         This section allows you to create calendars. You can add unlimited number of calendars.
         <a href="https://web-dorado.com/spider-calendar-wordpress-guide-step-2.html" target="_blank" style="color:blue; text-decoration:none;">More...</a>
-      </td>
-      <td colspan="7" align="right" style="font-size:16px;">
-        <a href="https://web-dorado.com/files/fromSpiderCalendarWP.php" target="_blank" style="color:red; text-decoration:none;">
-          <img src="<?php echo plugins_url('images/header.png', __FILE__); ?>" border="0" alt="https://web-dorado.com/files/fromSpiderCalendarWP.php" width="215">
-        </a>
       </td>
     </tr>
     <tr>
@@ -624,13 +603,7 @@ function show_event_category($rows, $pageNav, $sort){
           This section allows you to create event categories. You can add unlimited number of categories.
           <a href="https://web-dorado.com/spider-calendar-wordpress-guide-step-4.html" target="_blank" style="color:blue; text-decoration:none;">More...</a>
         </td>
-		<td colspan="7" align="right" style="font-size:16px;">
-      <a href="https://web-dorado.com/files/fromSpiderCalendarWP.php" target="_blank" style="color:red; text-decoration:none;">
-        <img src="<?php echo plugins_url('images/header.png', __FILE__); ?>" border="0" alt="https://web-dorado.com/files/fromSpiderCalendarWP.php" width="215">
-      </a>
-    </td>
       </tr>
-	  
       <tr>
         <td style="width:210px"><h2>Event Category</h2></td>
         <td style="width:90px; text-align:right;">
@@ -644,7 +617,7 @@ function show_event_category($rows, $pageNav, $sort){
     </table>
     <?php
     if (isset($_POST['serch_or_not']) && ($_POST['serch_or_not'] == "search")) {
-      $serch_value = esc_js(esc_html(stripslashes($_POST['search_cat_by_title'])));
+      $serch_value = $_POST['search_cat_by_title'];
     }
     else {
       $serch_value = "";
@@ -661,7 +634,7 @@ function show_event_category($rows, $pageNav, $sort){
       </div>';
     print_html_nav($pageNav['total'], $pageNav['limit'], $serch_fields);
     ?>
-    <table class="wp-list-table widefat fixed pages" style="width:99%">
+    <table class="wp-list-table widefat fixed pages" style="width:95%">
       <thead>
       <TR>
         <th scope="col" id="id" class="<?php echo (($sort["sortid_by"] == "id") ? $sort["custom_style"] : $sort["default_style"]); ?>" style="width:50px">
@@ -738,8 +711,37 @@ $row=$wpdb->get_row($wpdb->prepare ("SELECT * FROM " . $wpdb->prefix . "spiderca
 					document.getElementById('adminForm').submit();
 				  }
 		  }
+     		  jQuery(document).ready(function() {
+		jQuery('.color_input').wpColorPicker();
+	 });
         </script>    
-
+		<style>
+		.wp-picker-holder{
+			position: absolute;
+			z-index: 2;
+			top: 20px;
+		}
+		.wp-color-result {
+		  background-color: transparent;
+		  width: 85px;
+		}
+		.wp-color-result:focus{
+			outline: none;
+		}
+		.color_for_this {
+		  height: 24px;
+		  top: 0px;
+		  position: relative;
+		  width: 35px;
+		  left: 2px;
+		}
+		 .wp-color-result:hover{
+		  background-color: transparent;
+		}
+		.wp-color-result:focus{
+			outline: none;
+		}
+		</style>
 	<table>
 		 <tr>
 			  <td align="right"><input type="button" onClick="submitbutton('save_category_event')" value="Save" class="button-secondary action"></td>
@@ -773,14 +775,16 @@ $row=$wpdb->get_row($wpdb->prepare ("SELECT * FROM " . $wpdb->prefix . "spiderca
 				 <tr>
 			   <td class="key" ><label for="message"><?php echo 'Category Color'; ?>:</label>  </td>
              
-               <td><input type="text" name="color" id="color" class="color" style="width:134px;" value="<?php if(isset($row->color)) echo htmlspecialchars($row->color); 
-			   ?>"/></td>
+               <td><div class="color_for_this" style="background-color: #<?php if(isset($row->color)) echo htmlspecialchars($row->color); ?>">
+					<input type="text" name="color" id="color" class="color_input wp-color-picker" style="width:134px;" value="<?php if(isset($row->color)) echo htmlspecialchars($row->color); ?>"/>
+				</div></td>
                </tr>
                 
 
 			    <tr>
 					<td class="key"><label for="message"> <?php echo 'Description'; ?>:</label></td>
 					<td ><div id="poststuff" style="width:100% !important;">
+					
 					 <?php if(version_compare(get_bloginfo('version'),3.3)<0) {?>
 							<div id="<?php echo user_can_richedit() ? 'postdivrich' : 'postdiv'; ?>" class="postarea"><?php the_editor(stripslashes($row->description),"description","title" ); ?>
 							</div>
@@ -808,7 +812,7 @@ $row=$wpdb->get_row($wpdb->prepare ("SELECT * FROM " . $wpdb->prefix . "spiderca
                 </table>
                 
      </fieldset >  
-       </div>
+       </div>  
 <?php wp_nonce_field('nonce_sp_cal', 'nonce_sp_cal'); ?>	   
 <input type="hidden" name="id" value="<?php echo $id ?>" />
 </form>
@@ -818,8 +822,9 @@ $row=$wpdb->get_row($wpdb->prepare ("SELECT * FROM " . $wpdb->prefix . "spiderca
 	
 	}
 
+		
 	
-	function html_upcoming_widget($rows, $pageNav, $sort){
+function html_upcoming_widget($rows, $pageNav, $sort){
 require_once("spidercalendar_upcoming_events_widget.php");
 	  global $wpdb;
 	 $input_id=$_GET['id_input'];
@@ -844,7 +849,6 @@ require_once("spidercalendar_upcoming_events_widget.php");
 		border-radius: 10px;
 		width: 30px;
 		height: 25px;
-	}
 	}
 	input[type=checkbox]:checked:before,
 	th.sorted.asc .sorting-indicator:before, th.desc:hover span.sorting-indicator:before,
@@ -954,7 +958,7 @@ function select_events()
 		
   </script>
 <?php
-
+/*
 
   if(get_bloginfo( 'version' )>3.3){
 
@@ -978,7 +982,7 @@ else
 
 }
 
-?>
+*/?>
 
 <link rel="stylesheet" id="thickbox-css" href="<?php echo bloginfo('url')?>/wp-includes/js/thickbox/thickbox.css?ver=20111117" type="text/css" media="all">
 
@@ -998,7 +1002,7 @@ else
   </table>
   <?php
   if (isset($_POST['serch_or_not']) && ($_POST['serch_or_not'] == "search")) {
-    $serch_value = esc_js(esc_html(stripslashes($_POST['search_events_by_title'])));
+    $serch_value = $_POST['search_events_by_title'];
   }
   else {
     $serch_value = "";
@@ -1023,15 +1027,15 @@ else
   print_html_nav($pageNav['total'], $pageNav['limit'], $serch_fields);
   ?>
   <style>
-   .sorting-indicator {
-		width: 7px;
-		height: 4px;
-		margin-top: 8px;
-		margin-left: 7px;
-		background-image: url('images/sort.gif');
-		background-repeat: no-repeat;
-	}
-	.wd_button{
+  .sorting-indicator {
+width: 7px;
+height: 4px;
+margin-top: 8px;
+margin-left: 7px;
+background-image: url('images/sort.gif');
+background-repeat: no-repeat;
+}
+.wd_button{
 		border: 1px solid #D5D5D5 !important;
 		border-radius: 10px;
 		width: 30px;
@@ -1102,10 +1106,13 @@ else
 die();
 }
 	
+
 // Events.
 function html_show_spider_event($rows, $pageNav, $sort, $calendar_id, $cal_name) {
   global $wpdb;
+
   ?>
+
   <style>
     .calendar .button {
       display: table-cell !important;
@@ -1148,14 +1155,9 @@ function html_show_spider_event($rows, $pageNav, $sort, $calendar_id, $cal_name)
         unlimited number of events for each calendar.
         <a href="https://web-dorado.com/spider-calendar-wordpress-guide-step-3.html" target="_blank" style="color:blue; text-decoration:none;">More...</a>
       </td>
-      <td colspan="7" align="right" style="font-size:16px;">
-        <a href="https://web-dorado.com/files/fromSpiderCalendarWP.php" target="_blank" style="color:red; text-decoration:none;">
-          <img src="<?php echo plugins_url('images/header.png', __FILE__); ?>" border="0" alt="https://web-dorado.com/files/fromSpiderCalendarWP.php" width="215">
-        </a>
-      </td>
     </tr>
     <tr>
-      <td width="100%"><h2>Event Manager for calendar <font style="color:red"><?php echo $cal_name; ?></font></h2></td>
+      <td width="95%"><h2>Event Manager for calendar <font style="color:red"><?php echo $cal_name; ?></font></h2></td>
       <td>
         <p class="submit" style="padding:0px; text-align:left">
           <input class="button-primary" type="button" value="Add an Event" name="custom_parametrs" onClick="window.location.href='admin.php?page=SpiderCalendar&task=add_event&calendar_id=<?php echo $calendar_id; ?>'"/>
@@ -1178,7 +1180,7 @@ function html_show_spider_event($rows, $pageNav, $sort, $calendar_id, $cal_name)
   $startdate = (isset($_POST["startdate"]) ? esc_js(esc_html(stripslashes($_POST["startdate"]))) : '');
   $enddate = (isset($_POST["enddate"]) ? esc_js(esc_html(stripslashes($_POST["enddate"]))) : '');
   $serch_fields = '
-    <div class="alignleft actions">
+    <div class="alignleft actions" >
     	<label for="search_events_by_title" style="font-size:14px">Title: </label>
       <input type="text" name="search_events_by_title" value="' . $serch_value . '" id="search_events_by_title" onchange="clear_serch_texts()" />
     </div>
@@ -1193,8 +1195,10 @@ function html_show_spider_event($rows, $pageNav, $sort, $calendar_id, $cal_name)
       <input type="button" value="Reset" onclick="window.location.href=\'admin.php?page=SpiderCalendar&task=show_manage_event&calendar_id=' . $calendar_id . '\'" class="button-secondary action">
     </div>';
   print_html_nav($pageNav['total'], $pageNav['limit'], $serch_fields);
+
   ?>
-  <table class="wp-list-table widefat fixed pages" style="width:99%">
+
+  <table class="wp-list-table widefat fixed pages" style="width:95%">
     <thead>
     <TR>
       <th scope="col" id="id" class="<?php echo (($sort["sortid_by"] == "id") ? $sort["custom_style"] : $sort["default_style"]); ?>" style="width:50px">
@@ -1221,7 +1225,7 @@ function html_show_spider_event($rows, $pageNav, $sort, $calendar_id, $cal_name)
           <span class="sorting-indicator"></span>
         </a>
       </th>
-	   <th scope="col" id="cattitle" class="<?php echo (($sort["sortid_by"] == "cattitle") ? $sort["custom_style"] : $sort["default_style"]); ?>">
+	  <th scope="col" id="cattitle" class="<?php echo (($sort["sortid_by"] == "cattitle") ? $sort["custom_style"] : $sort["default_style"]); ?>">
         <a href="javascript:ordering('cattitle',<?php echo (($sort["sortid_by"] == "cattitle") ? $sort["1_or_2"] : "1"); ?>)">
           <span>Category</span>
           <span class="sorting-indicator"></span>
@@ -1238,18 +1242,19 @@ function html_show_spider_event($rows, $pageNav, $sort, $calendar_id, $cal_name)
     </TR>
     </thead>
     <tbody>
-      <?php for ($i = 0; $i < count($rows); $i++) { ?>
+      <?php for ($i = 0; $i < count($rows); $i++) { 
+	  ?>
+	  
     <tr>
       <td><?php echo $rows[$i]->id; ?></td>
       <td><a href="admin.php?page=SpiderCalendar&calendar_id=<?php echo $calendar_id; ?>&task=edit_event&id=<?php echo $rows[$i]->id; ?>"><?php echo $rows[$i]->title; ?></a>
       </td>
       <td><?php if ($rows[$i]->date_end != '0000-00-00' && $rows[$i]->date_end != '2070-12-12') echo $rows[$i]->date . ' - ' . $rows[$i]->date_end; else echo $rows[$i]->date; ?></td>
-      <td><?php echo $rows[$i]->time ?></td>
-	  <td><?php echo $rows[$i]->cattitle ?></td>
-      <td>
-	    <a <?php if (!$rows[$i]->published) echo 'style="color:#C00"'; ?> href="admin.php?page=SpiderCalendar&calendar_id=<?php echo $calendar_id; ?>&task=published_event&id=<?php echo $rows[$i]->id; ?>&_wpnonce=<?php echo $sp_cal_nonce; ?>"><?php if ($rows[$i]->published)
-          echo 'Yes'; else echo 'No'; ?>
-		</a>
+	  <td><?php echo $rows[$i]->time ?></td>
+      <td><?php echo $rows[$i]->cattitle ?></td>
+      <td><a <?php if (!$rows[$i]->published) echo 'style="color:#C00"'; ?>
+        href="admin.php?page=SpiderCalendar&calendar_id=<?php echo $calendar_id; ?>&task=published_event&id=<?php echo $rows[$i]->id; ?>&_wpnonce=<?php echo $sp_cal_nonce; ?>"><?php if ($rows[$i]->published)
+        echo 'Yes'; else echo 'No'; ?></a>
       </td>
       <td>
         <a href="admin.php?page=SpiderCalendar&calendar_id=<?php echo $calendar_id; ?>&task=edit_event&id=<?php echo $rows[$i]->id; ?>">Edit</a>
@@ -1261,6 +1266,7 @@ function html_show_spider_event($rows, $pageNav, $sort, $calendar_id, $cal_name)
       <?php } ?>
     </tbody>
   </table>
+  <?php wp_nonce_field('nonce_sp_cal', 'nonce_sp_cal'); ?>
   <input type="hidden" name="id_for_playlist" id="id_for_playlist" value="<?php if (isset($_POST['id_for_playlist'])) echo esc_js(esc_html(stripslashes($_POST['id_for_playlist']))); ?>"/>
   <input type="hidden" name="asc_or_desc" id="asc_or_desc" value="<?php if (isset($_POST['asc_or_desc'])) echo esc_js(esc_html(stripslashes($_POST['asc_or_desc']))); ?>"/>
   <input type="hidden" name="order_by" id="order_by" value="<?php if (isset($_POST['order_by'])) echo esc_js(esc_html(stripslashes($_POST['order_by']))); ?>"/>
@@ -1522,7 +1528,6 @@ function html_add_spider_event($calendar_id, $cal_name) {
       -webkit-border-radius: 8px;
       -moz-border-radius: 8px;
       border-radius: 8px;
-
     }
 	.wd_button{
 		border: 1px solid #D5D5D5 !important;
@@ -2284,4 +2289,4 @@ function html_edit_spider_event($row, $calendar_id, $id, $cal_name) {
     <input type="hidden" name="cid[]" value="<?php echo $row->id; ?>"/>
     <input type="hidden" name="task" value="event"/>
     <input type="hidden" name="calendar" value=""/>
-  </form> <?php } ?>
+  </form> <?php }

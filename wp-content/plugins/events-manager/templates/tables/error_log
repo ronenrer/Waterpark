@@ -1,4 +1,0 @@
-[07-Nov-2013 17:42:36] PHP Fatal error:  Call to undefined function  em_add_get_params() in /home1/oraplay/public_html/AURAPLAYER.COM/wp-content/plugins/events-manager/templates/tables/events.php on line 18
-[07-Nov-2013 17:42:48] PHP Fatal error:  Call to undefined function  is_admin() in /home1/oraplay/public_html/AURAPLAYER.COM/wp-content/plugins/events-manager/templates/tables/locations.php on line 6
-[17-Feb-2014 12:40:32] PHP Fatal error:  Call to undefined function  em_add_get_params() in /home1/oraplay/public_html/wp-content/plugins/events-manager/templates/tables/events.php on line 18
-[17-Feb-2014 12:40:40] PHP Fatal error:  Call to undefined function  is_admin() in /home1/oraplay/public_html/wp-content/plugins/events-manager/templates/tables/locations.php on line 6

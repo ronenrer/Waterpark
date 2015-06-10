@@ -5,10 +5,10 @@
 							<span id="current-state">הפארק פתוח למקרים</span>
 						</div>
 						<div class="col-xs-6 weather">
-							<?php echo do_shortcode('[awesome-weather location="294071" units="C" size="wide"  hide_stats="1"  custom_bg_color="#027DBC"  background_by_weather="1"]');?>
+							<?php echo do_shortcode('[awesome-weather location="294071" units="C" size="wide"  hide_stats="1"  custom_bg_color="#027DBC" background="http://www.waterpark.aeroplane.co.il/wp-content/themes/aeroplane-waterpark/awe-backgrounds/default-weather.png" background_by_weather="1"]');?>
 						</div>
 					</div>
-					
+				
 					<?php if ( is_active_sidebar( 'sidebar1' ) ) : ?>
 
 						<?php dynamic_sidebar( 'sidebar1' ); ?>

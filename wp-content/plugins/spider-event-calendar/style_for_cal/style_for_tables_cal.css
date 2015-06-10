@@ -350,7 +350,7 @@ table.adminform td.helpMenu{
 }
 
 
-fieldset.adminform { border: 1px solid #ccc; margin: 0 10px 10px 10px; }
+fieldset.adminform { border: 1px solid #ccc; margin: 0 10px 10px 10px;   width: 275px; }
 
 /** Table styles **/
 

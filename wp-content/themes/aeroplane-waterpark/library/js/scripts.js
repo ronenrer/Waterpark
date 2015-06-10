@@ -112,7 +112,18 @@ jQuery(document).ready(function($) {
    * You can remove this if you don't need it
   */
   loadGravatars();
-  $(".cala_day").each(function(){
-    $(this).css("background-color",$(this).find("#cat_width").css("border-top-color"));
+  $('.gform_button').addClass('btn btn-primary btn-lg');
+
+ 
+  $('.panel-heading a').each(function() {
+      $(this).click(function() {     
+        if ($(this).parents("div.panel").hasClass('active')){
+          $(this).parents("div.panel").removeClass('active');
+        } else {
+           $(".panel").removeClass('active');
+           $(this).parents("div.panel").addClass('active');
+        }
+      });
   });
+
 }); /* end of as page load scripts */

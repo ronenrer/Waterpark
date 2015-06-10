@@ -1,8 +1,0 @@
-[07-Nov-2013 17:39:18] PHP Fatal error:  Call to undefined function  _e() in /home1/oraplay/public_html/AURAPLAYER.COM/wp-content/plugins/events-manager/templates/forms/map-container.php on line 3
-[07-Nov-2013 17:46:46] PHP Fatal error:  Class 'EM_Event' not found in /home1/oraplay/public_html/AURAPLAYER.COM/wp-content/plugins/events-manager/templates/forms/event-editor.php on line 16
-[07-Nov-2013 17:46:47] PHP Fatal error:  Call to undefined function  esc_attr() in /home1/oraplay/public_html/AURAPLAYER.COM/wp-content/plugins/events-manager/templates/forms/event/bookings-ticket-form.php on line 9
-[07-Nov-2013 17:46:51] PHP Fatal error:  Class 'EM_Location' not found in /home1/oraplay/public_html/AURAPLAYER.COM/wp-content/plugins/events-manager/templates/forms/location-editor.php on line 15
-[17-Feb-2014 12:43:03] PHP Fatal error:  Call to undefined function  _e() in /home1/oraplay/public_html/wp-content/plugins/events-manager/templates/forms/map-container.php on line 3
-[17-Feb-2014 12:43:04] PHP Fatal error:  Call to undefined function  esc_attr() in /home1/oraplay/public_html/wp-content/plugins/events-manager/templates/forms/event/bookings-ticket-form.php on line 9
-[17-Feb-2014 12:43:07] PHP Fatal error:  Class 'EM_Event' not found in /home1/oraplay/public_html/wp-content/plugins/events-manager/templates/forms/event-editor.php on line 16
-[17-Feb-2014 12:43:09] PHP Fatal error:  Class 'EM_Location' not found in /home1/oraplay/public_html/wp-content/plugins/events-manager/templates/forms/location-editor.php on line 15

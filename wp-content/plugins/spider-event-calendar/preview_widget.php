@@ -61,6 +61,7 @@ $day = substr($date, 8, 2);
   var font_month = window.parent.document.getElementById('font_month').value;
   var font_day = window.parent.document.getElementById('font_day').value;
   var font_weekday = window.parent.document.getElementById('font_weekday').value;
+  var current_day = window.parent.document.getElementById('border_day').value;
   
   var head = document.getElementsByTagName('head')[0],
     style = document.createElement('style'),
@@ -68,7 +69,7 @@ $day = substr($date, 8, 2);
       '#calendar, .cell_body_su, #form_table, #form_table_td, #calendar_table, .cell_body { width: ' + cal_width + 'px; }' +
       '#calendar_table { background-color: ' + calendar_bg + '; }' +
       '#year { font-size: ' + year_font_size + 'px; color: ' + text_color_month + '; }' +
-      '.cell_body { background-color: ' + weekdays_bg_color + '; }' +
+      '.cell_body_mo { background-color: ' + weekdays_bg_color + '; }' +
       '.cell_body_su { background-color: ' + weekday_su_bg_color + '; color: ' + color_week_days + '; font-family: ' + font_weekday + '; }' +
       '.calbottom_border, .cell_body_mo, .calborder_day, .calborder_day { width: ' + cell_width + 'px;}' +
       '.cell_body_mo { color: ' + color_week_days + '; font-family: ' + font_weekday + '; }' +
@@ -91,7 +92,8 @@ $day = substr($date, 8, 2);
       '#calendar .views { background-color: ' + calendar_bg + '; width: ' + ((cal_width / 4) - 2) + 'px; font-family: ' + font_month + ';}' +
       '#year_tr { font-family: ' + font_year + '; }' +
       '#month_tr { font-family: ' + font_month + '; }' +
-      '#days_tr, #days_tr1 { font-family: ' + font_day + '; }' 
+      '#days_tr, #days_tr1 { font-family: ' + font_day + '; }' +
+	  '.text_color_this_month_unevented.current_day { border: 2px solid #' + current_day + ' !important; }'
     );
   style.type = 'text/css';
   if (style.styleSheet) {

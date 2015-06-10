@@ -176,6 +176,16 @@ function bones_wpsearch($form) {
 	</form>';
 	return $form;
 } // don't remove this bracket!
-
+if( function_exists('acf_add_options_page') ) {
+  
+  acf_add_options_page(array(
+    'page_title'  => 'Theme General Settings',
+    'menu_title'  => 'הגדרות תבנית',
+    'menu_slug'   => 'theme-general-settings',
+    'capability'  => 'edit_theme_options',
+    'redirect'    => false
+  ));
+    
+}
 
 ?>

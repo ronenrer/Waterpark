@@ -1,26 +1,28 @@
 <?php
-
 /*
 Plugin Name: Spider Event Calendar
 Plugin URI: https://web-dorado.com/products/wordpress-calendar.html
 Description: Spider Event Calendar is a highly configurable product which allows you to have multiple organized events. Spider Event Calendar is an extraordinary user friendly extension.
-Version: 1.4.19
+Version: 2.5.22
 Author: https://web-dorado.com/
 License: GNU/GPLv3 http://www.gnu.org/licenses/gpl-3.0.html
 */
 
+$wd_spider_calendar_version="2.5.22";
 // LANGUAGE localization.
+add_action('init', 'sp_calendar_language_load');
+
 function sp_calendar_language_load() {
   load_plugin_textdomain('sp_calendar', FALSE, basename(dirname(__FILE__)) . '/languages');
 }
-add_action('init', 'sp_calendar_language_load');
 
 add_action('init', 'sp_cal_registr_some_scripts');
 	
 function	sp_cal_registr_some_scripts(){
-  wp_register_script("Canlendar_upcoming", plugins_url("elements/calendar.js", __FILE__), array(), '1.4.16');
-  wp_register_script("calendnar-setup_upcoming", plugins_url("elements/calendar-setup.js", __FILE__), array(), '1.4.16');
-  wp_register_script("calenndar_function_upcoming", plugins_url("elements/calendar_function.js", __FILE__), array(), '1.4.16');
+global $wd_spider_calendar_version;
+ wp_register_script("Canlendar_upcoming", plugins_url("elements/calendar.js", __FILE__), array(), $wd_spider_calendar_version);
+  wp_register_script("calendnar-setup_upcoming", plugins_url("elements/calendar-setup.js", __FILE__), array(), $wd_spider_calendar_version);
+  wp_register_script("calenndar_function_upcoming", plugins_url("elements/calendar_function.js", __FILE__), array(), $wd_spider_calendar_version);
 
 
 }
@@ -28,6 +30,7 @@ function	sp_cal_registr_some_scripts(){
 // Include widget.
 require_once("widget_spider_calendar.php");
 require_once("spidercalendar_upcoming_events_widget.php");
+
 function current_page_url_sc() {
   if (is_home()) {
     $pageURL = site_url();
@@ -74,26 +77,21 @@ function spider_calendar_big($atts) {
 }
 add_shortcode('Spider_Calendar', 'spider_calendar_big');
 
+
 function spider_calendar_big_front_end($id, $theme, $default, $select, $widget = 0) {
   require_once("front_end/frontend_functions.php");
   ob_start();
   global $many_sp_calendar;
   global $wpdb;
-  
-  if ($widget === 1) {
-$themes = $wpdb->get_row($wpdb->prepare('SELECT * FROM ' . $wpdb->prefix . 'spidercalendar_widget_theme WHERE id=%d', $theme));
-}
-else{
 $themes = $wpdb->get_row($wpdb->prepare('SELECT * FROM ' . $wpdb->prefix . 'spidercalendar_theme WHERE id=%d', $theme));
-}
   $cal_width = $themes->width; ?>
   <input type="hidden" id="cal_width<?php echo $many_sp_calendar ?>" value="<?php echo $cal_width ?>" /> 
   <div id='bigcalendar<?php echo $many_sp_calendar ?>'></div>
-  <script> 
+  <script>
     var tb_pathToImage = "<?php echo plugins_url('images/loadingAnimation.gif', __FILE__) ?>";
     var tb_closeImage = "<?php echo plugins_url('images/tb-close.png', __FILE__) ?>"
 	var randi;
-    if (typeof showbigcalendar != 'function') {
+    if (typeof showbigcalendar != 'function') {	
       function showbigcalendar(id, calendarlink, randi,widget) {
         var xmlHttp;
         try {
@@ -115,6 +113,7 @@ $themes = $wpdb->get_row($wpdb->prepare('SELECT * FROM ' . $wpdb->prefix . 'spid
         }
         xmlHttp.onreadystatechange = function () {
           if (xmlHttp.readyState == 4) {
+            // document.getElementById(id).innerHTML = xmlHttp.responseText;
             jQuery('#' + id).html(xmlHttp.responseText);
           }
         }
@@ -146,7 +145,7 @@ if(widget!=1)
 		var responsive_width = (calwidth)/parent_width*100;
 		document.getElementById('afterbig'+randi).setAttribute('style','width:'+responsive_width+'%;');
 		jQuery('pop_table').css('height','100%');
-  } 
+  }
 	else
 	{
 			document.getElementById('afterbig'+randi).setAttribute('style','width:100%;');	
@@ -197,20 +196,20 @@ if(widget!=1)
 			jQuery('#TB_window').css('max-width',width_orig+'px');
 			jQuery('#TB_window iframe').css('max-width',width_orig+'px');
 			jQuery('#TB_window').css('max-height',height_orig+'px');
-			}			
+			}
 			jQuery('#TB_window').css('background','none');
 			jQuery('#TB_window').css('background-color','none');
 			jQuery('#TB_window iframe').css('background-color','none');			
           };
           thickDims();
           $(window).resize(function () {
-            thickDims();
+            thickDims();			
 			if(jQuery(window).width() < 640 ){
 				jQuery('#TB_window').css('width','90%');
 				jQuery('#TB_window').css('margin-top','-13%');
 				jQuery('#TB_window iframe').css('height','100%');
 				jQuery('#TB_window').css('height','100%');
-			}		
+			}
 if(jQuery(window).width() > 900 )
 			   {
 					jQuery('#TB_window').css('left','50%');						
@@ -223,7 +222,7 @@ if(jQuery(window).width() > 900 )
             if (tbWidth = href.match(reg_with))
               tbWidth = parseInt(tbWidth[0].replace(/[^0-9]+/g, ''), 10);
             else
-              tbWidth = jQuery(window).width() - 90;
+              tbWidth = jQuery(window).width() - 90;			  
             var reg_heght = new RegExp(xx_cal_xx + "tbHeight=[0-9]+");
             if (tbHeight = href.match(reg_heght))
               tbHeight = parseInt(tbHeight[0].replace(/[^0-9]+/g, ''), 10);
@@ -297,7 +296,8 @@ if(jQuery(window).width() > 900 )
       'cur_page_url' => urlencode(current_page_url_sc()),
       'widget' => $widget,
 	  'rand' => $many_sp_calendar,
-      ), admin_url('admin-ajax.php'));?>','<?php echo $many_sp_calendar; ?>','<?php echo $widget; ?>');	  
+      ), admin_url('admin-ajax.php'));?>','<?php echo $many_sp_calendar; ?>','<?php echo $widget; ?>');
+	  
   </script>
 <style>
 #TB_iframeContent{
@@ -327,11 +327,11 @@ function spider_calendar_quick_update() {
   global $wpdb;
   if (isset($_POST['calendar_id']) && isset($_POST['calendar_title']) && isset($_POST['us_12_format_sp_calendar']) && isset($_POST['default_year']) && isset($_POST['default_month'])) {
     $wpdb->update($wpdb->prefix . 'spidercalendar_calendar', array(
-        'title' => esc_sql(esc_html(stripslashes($_POST['calendar_title']))),
-        'time_format' => esc_sql(esc_html(stripslashes($_POST['us_12_format_sp_calendar']))),
-        'def_year' => esc_sql(esc_html(stripslashes($_POST['default_year']))),
-        'def_month' => esc_sql(esc_html(stripslashes($_POST['default_month']))),
-      ), array('id' => esc_sql(esc_html(stripslashes($_POST['calendar_id'])))), array(
+        'title' => $_POST['calendar_title'],
+        'time_format' => $_POST['us_12_format_sp_calendar'],
+        'def_year' => $_POST['default_year'],
+        'def_month' => $_POST['default_month'],
+      ), array('id' => $_POST['calendar_id']), array(
         '%s',
         '%d',
         '%s',
@@ -373,7 +373,7 @@ function spider_calendar_quick_edit() {
   }
   global $wpdb;
   if (isset($_POST['calendar_id'])) {
-    $row = $wpdb->get_row($wpdb->prepare("SELECT * FROM " . $wpdb->prefix . "spidercalendar_calendar WHERE id='%d'", $_POST['calendar_id']));
+    $row = $wpdb->get_row($wpdb->prepare("SELECT * FROM " . $wpdb->prefix . "spidercalendar_calendar WHERE id='%d'", (int)$_POST['calendar_id']));
     ?>
   <td colspan="4" class="colspanchange">
     <fieldset class="inline-edit-col-left">
@@ -468,73 +468,59 @@ function sp_calendar_options_panel() {
   $page_widget_theme = add_submenu_page('SpiderCalendar', 'Calendar Parameters', 'Widget Themes', 'manage_options', 'spider_widget_calendar_themes', 'spider_widget_calendar_params');
   $Featured_Plugins = add_submenu_page('SpiderCalendar', 'Featured Plugins', 'Featured Plugins', 'manage_options', 'calendar_Featured_Plugins', 'calendar_Featured_Plugins');
   $Featured_themes = add_submenu_page('SpiderCalendar', 'Featured Themes', 'Featured Themes', 'manage_options', 'calendar_Featured_themes', 'calendar_Featured_themes');
-  
-  add_submenu_page('SpiderCalendar', 'Licensing', 'Licensing', 'manage_options', 'Spider_calendar_Licensing', 'Spider_calendar_Licensing');
+ 
   add_submenu_page('SpiderCalendar', 'Uninstall  Spider Event Calendar', 'Uninstall  Spider Event Calendar', 'manage_options', 'Uninstall_sp_calendar', 'Uninstall_sp_calendar'); // uninstall Calendar
+  add_action('admin_print_styles-' . $page_theme, 'spider_calendar_themes_admin_styles_scripts');
   add_action('admin_print_styles-' . $Featured_Plugins, 'calendar_Featured_Plugins_styles');
   add_action('admin_print_styles-' . $Featured_themes, 'calendar_Featured_themes_styles');
-  add_action('admin_print_styles-' . $page_theme, 'spider_calendar_themes_admin_styles_scripts');
   add_action('admin_print_styles-' . $page_event_category, 'spider_calendar_event_category_admin_styles_scripts');
   add_action('admin_print_styles-' . $page_calendar, 'spider_calendar_admin_styles_scripts');
   add_action('admin_print_styles-' . $page_widget_theme, 'spider_widget_calendar_themes_admin_styles_scripts');
-}
-
-function Spider_calendar_Licensing() {
-  ?>
-  <div style="width:95%">
-    <p>This plugin is the non-commercial version of the Spider Event Calendar. Use of the calendar is free.<br />
-    The only limitation is the use of the themes. If you want to use one of the 11 standard themes or create a new one that
-    satisfies the needs of your web site, you are required to purchase a license.<br />
-    Purchasing a license will add 17 standard themes and give possibility to edit the themes of the Spider Event Calendar.
-    </p>
-    <br /><br />
-    <a href="https://web-dorado.com/files/fromSpiderCalendarWP.php" class="button-primary" target="_blank">Purchase a License</a>
-    <br /><br /><br />
-    <p>After the purchasing the commercial version follow this steps:</p>
-    <ol>
-      <li>Deactivate Spider Event Calendar Plugin</li>
-      <li>Delete Spider Event Calendar Plugin</li>
-      <li>Install the downloaded commercial version of the plugin</li>
-  </ol>
-  </div>
-  <?php
+  
 }
 
 function spider_calendar_themes_admin_styles_scripts() {
+global $wd_spider_calendar_version;
   wp_enqueue_script("jquery");
-  wp_enqueue_script("standart_themes", plugins_url('elements/theme_reset.js', __FILE__), array(), '1.4.16');
-  wp_enqueue_script("colcor_js", plugins_url('jscolor/jscolor.js', __FILE__), array(), '1.4.16');
+  wp_enqueue_script("standart_themes", plugins_url('elements/theme_reset.js', __FILE__), array(), $wd_spider_calendar_version);
+  wp_enqueue_script('wp-color-picker');
+  wp_enqueue_style( 'wp-color-picker' );
   if (isset($_GET['task'])) {
     if ($_GET['task'] == 'edit_theme' || $_GET['task'] == 'add_theme' || $_GET['task'] == 'Apply') {
-      wp_enqueue_style("parsetheme_css", plugins_url('style_for_cal/style_for_tables_cal.css', __FILE__), array(), '1.4.16');
+      wp_enqueue_style("parsetheme_css", plugins_url('style_for_cal/style_for_tables_cal.css', __FILE__), array(), $wd_spider_calendar_version);
     }
   }
 }
 
 function spider_widget_calendar_themes_admin_styles_scripts() {
+global $wd_spider_calendar_version;
   wp_enqueue_script("jquery");
-  wp_enqueue_script("standart_themes", plugins_url('elements/theme_reset_widget.js', __FILE__), array(), '1.4.16');
-  wp_enqueue_script("colcor_js", plugins_url('jscolor/jscolor.js', __FILE__), array(), '1.4.16');
+  wp_enqueue_script("standart_themes", plugins_url('elements/theme_reset_widget.js', __FILE__), array(), $wd_spider_calendar_version);
+  wp_enqueue_script('wp-color-picker');
+  wp_enqueue_style( 'wp-color-picker' );
   if (isset($_GET['task'])) {
     if ($_GET['task'] == 'edit_theme' || $_GET['task'] == 'add_theme' || $_GET['task'] == 'Apply') {
-      wp_enqueue_style("parsetheme_css", plugins_url('style_for_cal/style_for_tables_cal.css', __FILE__), array(), '1.4.16');
+      wp_enqueue_style("parsetheme_css", plugins_url('style_for_cal/style_for_tables_cal.css', __FILE__), array(), $wd_spider_calendar_version);
     }
   }
 }
 
 function spider_calendar_admin_styles_scripts() {
-  wp_enqueue_script("Calendar", plugins_url("elements/calendar.js", __FILE__), array(), '1.4.16', FALSE);
-  wp_enqueue_script("calendar-setup", plugins_url("elements/calendar-setup.js", __FILE__), array(), '1.4.16', FALSE);
-  wp_enqueue_script("calendar_function", plugins_url("elements/calendar_function.js", __FILE__), array(), '1.4.16', FALSE);
-  wp_enqueue_style("Css", plugins_url("elements/calendar-jos.css", __FILE__), array(), '1.4.16', FALSE);
+  global $wd_spider_calendar_version;
+  wp_enqueue_script("Calendar", plugins_url("elements/calendar.js", __FILE__), array(), $wd_spider_calendar_version, FALSE);
+  wp_enqueue_script("calendar-setup", plugins_url("elements/calendar-setup.js", __FILE__), array(), $wd_spider_calendar_version, FALSE);
+  wp_enqueue_script("calendar_function", plugins_url("elements/calendar_function.js", __FILE__), array(), $wd_spider_calendar_version, FALSE);
+  wp_enqueue_style("Css", plugins_url("elements/calendar-jos.css", __FILE__), array(), $wd_spider_calendar_version, FALSE);
 }
 
 function spider_calendar_event_category_admin_styles_scripts(){
-  wp_enqueue_script("Calendar", plugins_url("elements/calendar.js", __FILE__), array(), '1.4.16', FALSE);
-  wp_enqueue_script("calendar-setup", plugins_url("elements/calendar-setup.js", __FILE__), array(), '1.4.16', FALSE);
-  wp_enqueue_script("calendar_function", plugins_url("elements/calendar_function.js", __FILE__), array(), '1.4.16', FALSE);
-  wp_enqueue_style("Css", plugins_url("elements/calendar-jos.css", __FILE__), array(), '1.4.16', FALSE);
-  wp_enqueue_script("colcor_js", plugins_url('jscolor/jscolor.js', __FILE__), array(), '1.4.16');
+  global $wd_spider_calendar_version;
+  wp_enqueue_script("Calendar", plugins_url("elements/calendar.js", __FILE__), array(), $wd_spider_calendar_version, FALSE);
+  wp_enqueue_script("calendar-setup", plugins_url("elements/calendar-setup.js", __FILE__), array(), $wd_spider_calendar_version, FALSE);
+  wp_enqueue_script("calendar_function", plugins_url("elements/calendar_function.js", __FILE__), array(), $wd_spider_calendar_version, FALSE);
+  wp_enqueue_style("Css", plugins_url("elements/calendar-jos.css", __FILE__), array(), $wd_spider_calendar_version, FALSE);
+  wp_enqueue_script('wp-color-picker');
+  wp_enqueue_style( 'wp-color-picker' );
   }
 
 add_filter('admin_head', 'spide_ShowTinyMCE');
@@ -572,6 +558,7 @@ require_once("front_end/bigcalendarlist_widget.php");
 require_once("front_end/bigcalendarday_widget.php");
 
 // Actions for popup and xmls.
+// add_action('wp_ajax_spiderbigcalendar', 'big_calendar');
 add_action('wp_ajax_spiderbigcalendar_day', 'big_calendar_day');
 add_action('wp_ajax_spiderbigcalendar_list', 'big_calendar_list');
 add_action('wp_ajax_spiderbigcalendar_week', 'big_calendar_week');
@@ -584,6 +571,7 @@ add_action('wp_ajax_spidercalendarbig', 'spiderbigcalendar');
 add_action('wp_ajax_spiderseemore', 'seemore');
 add_action('wp_ajax_window', 'php_window');
 // Ajax for users.
+// add_action('wp_ajax_nopriv_spiderbigcalendar', 'big_calendarr');
 add_action('wp_ajax_nopriv_spiderbigcalendar_day', 'big_calendar_day');
 add_action('wp_ajax_nopriv_spiderbigcalendar_list', 'big_calendar_list');
 add_action('wp_ajax_nopriv_spiderbigcalendar_week', 'big_calendar_week');
@@ -602,12 +590,16 @@ function add_button_style_calendar() {
 add_action('admin_head', 'add_button_style_calendar');
 
 function Manage_Spider_Calendar() {
-  global $wpdb;
+
+global $wpdb;
+
   if (!function_exists('print_html_nav')) {
     require_once("nav_function/nav_html_func.php");
   }
   require_once("calendar_functions.php"); // add functions for Spider_Video_Player
   require_once("calendar_functions.html.php"); // add functions for vive Spider_Video_Player
+
+
   if (isset($_GET["task"])) {
     $task = esc_html($_GET["task"]);
   }
@@ -635,8 +627,8 @@ function Manage_Spider_Calendar() {
       break;
     case 'published';
 	  $nonce_sp_cal = $_REQUEST['_wpnonce'];
-	  if (! wp_verify_nonce($nonce_sp_cal, 'nonce_sp_cal') )
-   	    die("Are you sure you want to do this?");
+	  if (! wp_verify_nonce($nonce_sp_cal, 'nonce_sp_cal') ) 
+	    die("Are you sure you want to do this?");
       spider_calendar_published($id);
       show_spider_calendar();
       break;
@@ -713,14 +705,15 @@ function Manage_Spider_Calendar() {
       break;
     case 'published_event';
 	  $nonce_sp_cal = $_REQUEST['_wpnonce'];
-	  if (! wp_verify_nonce($nonce_sp_cal, 'nonce_sp_cal') )
-   	    die("Are you sure you want to do this?");
+	  if (! wp_verify_nonce($nonce_sp_cal, 'nonce_sp_cal') ) 
+	    die("Are you sure you want to do this?");
       published_spider_event($calendar_id, $id);
       show_spider_event($calendar_id);
       break;
     default:
       show_spider_calendar();
       break;
+	 
   }
 }
 
@@ -785,13 +778,13 @@ switch($task){
 		break;
 		
 	case 'remove_event_category':	
-		check_admin_referer('nonce_sp_cal', 'nonce_sp_cal');
+	    check_admin_referer('nonce_sp_cal', 'nonce_sp_cal');
 		remove_category_event($id);
 		show_event_cat();
 		break;
 	case 'published':
-		$nonce_sp_cal = $_REQUEST['_wpnonce'];
-		if (! wp_verify_nonce($nonce_sp_cal, 'nonce_sp_cal') )
+	    $nonce_sp_cal = $_REQUEST['_wpnonce'];
+	    if (! wp_verify_nonce($nonce_sp_cal, 'nonce_sp_cal') ) 
 	      die("Are you sure you want to do this?");
 		spider_category_published($id);
 		show_event_cat();
@@ -807,11 +800,10 @@ function upcoming_widget(){
 	if (!function_exists('print_html_nav')) {
     require_once("nav_function/nav_html_func.php");
   }
- 
-	  global $wpdb;
- 
+
   spider_upcoming();
 }
+
 
 function spider_widget_calendar_params() {
   wp_enqueue_script('media-upload');
@@ -819,6 +811,7 @@ function spider_widget_calendar_params() {
   if (!function_exists('print_html_nav')) {
     require_once("nav_function/nav_html_func.php");
   }
+  require_once("widget_Theme_functions.php");
   require_once("widget_Themes_function.html.php");
   global $wpdb;
   if (isset($_GET["task"])) {
@@ -827,12 +820,54 @@ function spider_widget_calendar_params() {
   else {
     $task = "";
   }
+  if (isset($_GET["id"])) {
+    $id = (int) $_GET["id"];
+  }
+  else {
+    $id = 0;
+  }
   switch ($task) {
     case 'theme':
-      html_show_theme_calendar_widget();
+      show_theme_calendar_widget();
+      break;
+    case 'add_theme':
+      edit_theme_calendar_widget(0);
+      break;
+    case 'Save':
+      if ($id) {
+	    check_admin_referer('nonce_sp_cal', 'nonce_sp_cal');
+        apply_theme_calendar_widget($id);
+      }
+      else {
+	    check_admin_referer('nonce_sp_cal', 'nonce_sp_cal');
+        apply_theme_calendar_widget(-1);
+      }
+      show_theme_calendar_widget();
+      break;
+    case 'Apply':
+      if ($id) {
+	    check_admin_referer('nonce_sp_cal', 'nonce_sp_cal');
+        apply_theme_calendar_widget($id);
+      }
+      else {
+	    check_admin_referer('nonce_sp_cal', 'nonce_sp_cal');
+        apply_theme_calendar_widget(-1);
+        $id = $wpdb->get_var("SELECT MAX(id) FROM " . $wpdb->prefix . "spidercalendar_widget_theme");
+      }
+      edit_theme_calendar_widget($id);
+      break;
+    case 'edit_theme':
+      edit_theme_calendar_widget($id);
+      break;
+    case 'remove_theme_calendar':
+	  $nonce_sp_cal = $_REQUEST['_wpnonce'];
+	  if (! wp_verify_nonce($nonce_sp_cal, 'nonce_sp_cal') ) 
+	    die("Are you sure you want to do this?");
+      remove_theme_calendar_widget($id);
+      show_theme_calendar_widget();
       break;
     default:
-      html_show_theme_calendar_widget();
+      show_theme_calendar_widget();
   }
 }
 
@@ -843,6 +878,7 @@ function spider_calendar_params() {
   if (!function_exists('print_html_nav')) {
     require_once("nav_function/nav_html_func.php");
   }
+  require_once("Theme_functions.php"); // add functions for Spider_Video_Player
   require_once("Themes_function.html.php"); // add functions for vive Spider_Video_Player
   global $wpdb;
   if (isset($_GET["task"])) {
@@ -851,12 +887,54 @@ function spider_calendar_params() {
   else {
     $task = "";
   }
+  if (isset($_GET["id"])) {
+    $id = (int) $_GET["id"];
+  }
+  else {
+    $id = 0;
+  }
   switch ($task) {
     case 'theme':
-      html_show_theme_calendar();
+      show_theme_calendar();
+      break;
+    case 'add_theme':
+      edit_theme_calendar(0);
+      break;
+    case 'Save':
+      if ($id) {
+	    check_admin_referer('nonce_sp_cal', 'nonce_sp_cal');
+        apply_theme_calendar($id);
+      }
+      else {
+	    check_admin_referer('nonce_sp_cal', 'nonce_sp_cal');
+        apply_theme_calendar(-1);
+      }
+      show_theme_calendar();
+      break;
+    case 'Apply':
+      if ($id) {
+	    check_admin_referer('nonce_sp_cal', 'nonce_sp_cal');
+        apply_theme_calendar($id);
+      }
+      else {
+	    check_admin_referer('nonce_sp_cal', 'nonce_sp_cal');
+        apply_theme_calendar(-1);
+        $id = $wpdb->get_var("SELECT MAX(id) FROM " . $wpdb->prefix . "spidercalendar_theme");
+      }
+      edit_theme_calendar($id);
+      break;
+    case 'edit_theme':
+      edit_theme_calendar($id);
+      break;
+    case 'remove_theme_calendar':
+	  $nonce_sp_cal = $_REQUEST['_wpnonce'];
+	  if (! wp_verify_nonce($nonce_sp_cal, 'nonce_sp_cal') ) 
+	    die("Are you sure you want to do this?");
+      remove_theme_calendar($id);
+      show_theme_calendar();
       break;
     default:
-      html_show_theme_calendar();
+      show_theme_calendar();
   }
 }
 
@@ -890,7 +968,7 @@ function Uninstall_sp_calendar() {
         echo '<font style="color:#000;">';
         echo '</font><br />';
         echo '</p>';
-		 echo '<p>';
+        echo '<p>';
         echo "Table '" . $wpdb->prefix . "spidercalendar_theme' has been deleted.";
 		$wpdb->query("DROP TABLE " . $wpdb->prefix . "spidercalendar_theme");
         echo '<font style="color:#000;">';
@@ -950,7 +1028,7 @@ function Uninstall_sp_calendar() {
                   echo '<li>' . $wpdb->prefix . 'spidercalendar_event</li>' . "\n";
 				  echo '<li>' . $wpdb->prefix . 'spidercalendar_event_category</li>' . "\n";
                   echo '<li>' . $wpdb->prefix . 'spidercalendar_calendar</li>' . "\n";
-				  echo '<li>' . $wpdb->prefix . 'spidercalendar_theme</li>' . "\n";
+                  echo '<li>' . $wpdb->prefix . 'spidercalendar_theme</li>' . "\n";
                   echo '<li>' . $wpdb->prefix . 'spidercalendar_widget_theme</li>' . "\n";
                   ?>
                 </ol>
@@ -986,131 +1064,11 @@ function Uninstall_sp_calendar() {
   }
 }
 
-function calendar_Featured_themes_styles() {
-  wp_enqueue_style("Featured_themes", plugins_url("featured_themes.css", __FILE__), array(), '1.4.16');
-}
-
-function calendar_Featured_themes() { ?>
-<div id="main_featured_themes_page">
-	<table align="center" width="90%" style="margin-top: 0px;border-bottom: rgb(111, 111, 111) solid 1px;">
-		<tr>
-			<td colspan="2" style="height: 40px; padding: 30px 0px 0px 0px;">
-				<h3 style="margin: 0px;font-family:Segoe UI;padding-bottom: 15px;color: rgb(111, 111, 111); font-size:18pt;">Featured Themes</h3>
-			</td>
-			<td align="right" style="font-size:16px;"></td>
-		</tr>
-	</table>
-	<form method="post">
-		<ul id="featured-plugins-list">
-			<li class="business_elite">
-				<div class="product"></div>
-				<div class="title">
-					<strong class="heading">Business Elite Theme</strong>
-				</div>
-				<div class="description">
-					<p>Business Elite is a robust parallax theme for business websites. The theme uses smooth transitions and many functional sections.</p>
-				</div>
-				<a target="_blank" href="https://web-dorado.com/wordpress-themes/business-elite.html" class="download">Download plugin >></a>
-			</li>
-			<li class="sauron">
-				<div class="product"></div>
-				<div class="title">
-					<strong class="heading">Sauron Theme</strong>
-				</div>
-				<div class="description">
-					 <p>Sauron is a multipurpose parallax theme, which uses multiple interactive sections designed for the client-engagement.</p>		
-				</div>
-				<a target="_blank" href="https://web-dorado.com/wordpress-themes/sauron.html" class="download">Download</a>
-			</li>
-			<li class="mottomag">
-				<div class="product"></div>
-				<div class="title">
-					<strong class="heading">MottoMag Theme</strong>
-				</div>
-				<div class="description">
-					<p>MottoMag is a vibrant, responsive theme which is a perfect choice for the combination of textual content with videos and images.</p>	
-				</div>
-				<a target="_blank" href="https://web-dorado.com/wordpress-themes/mottomag.html" class="download">Download</a>
-			</li>
-			<li class="business_world">
-				<div class="product"></div>
-				<div class="title">
-					<strong class="heading">Business World Theme</strong>
-				</div>
-				<div class="description">
-					<p>Business World is an innovative WordPress theme great for Business websites.</p>		 
-				</div>
-				<a target="_blank" href="https://web-dorado.com/wordpress-themes/business-world.html" class="download">Download</a>
-			</li>
-			<li class="best_magazine">
-				<div class="product"></div>
-				<div class="title">
-					<strong class="heading">Best Magazine Theme</strong>
-				</div>
-				<div class="description">
-					<p>Best Magazine is an ultimate selection when you are dealing with multi-category news websites.</p>
-				</div>
-				<a target="_blank" href="https://web-dorado.com/wordpress-themes/best-magazine.html" class="download">Download</a>
-			</li>
-			<li class="wedding_style">
-				<div class="product"></div>
-				<div class="title">
-					<strong class="heading">Wedding Style Theme</strong>
-				</div>
-				<div class="description">
-					<p>Wedding style is a responsive theme designed for the organization and maintenance of wedding websites and blogs.</p>
-				</div>
-				<a target="_blank" href="https://web-dorado.com/wordpress-themes/wedding-style.html" class="download">Download</a>
-			</li>
-			<li class="magazine">
-				<div class="product"></div>
-				<div class="title">
-					<strong class="heading">Magazine Theme</strong>
-				</div>
-				<div class="description">
-					<p>Magazine theme is a perfect solution when creating news and informational websites. It comes with a wide range of layout options.</p>	
-				</div>
-				<a target="_blank" href="https://web-dorado.com/wordpress-themes/news-magazine.html" class="download">Download</a>
-			</li>
-			<li class="weddings">
-				<div class="product"></div>
-				<div class="title">
-					<strong class="heading">Weddings Theme</strong>
-				</div>
-				<div class="description">
-					<p>Weddings is an elegant, responsive WordPress theme designed for wedding websites. The theme includes multiple pages, homepage slider and gallery support.</p>
-				</div>
-				<a target="_blank" href="https://web-dorado.com/wordpress-themes/wedding.html" class="download">Download</a>
-			</li>
-			<li class="exclusive">
-				<div class="product"></div>
-				<div class="title">
-					<strong class="heading">Exclusive Theme</strong>
-				</div>
-				<div class="description">
-					<p>Exclusive is a unique theme designed to best fit business style websites. It comes with a large list of customizable features.</p>
-				</div>
-				<a target="_blank" href="https://web-dorado.com/wordpress-themes/exclusive.html" class="download">Download</a>
-			</li>
-			<li class="expert">
-				<div class="product"></div>
-				<div class="title">
-					<strong class="heading">Expert Theme</strong>
-				</div>
-				<div class="description">
-					<p>WordPress Expert is a modern, user-friendly and stylish theme. It has a list of customizable layout, style, colors and fonts.</p>
-				</div>
-				<a target="_blank" href="https://web-dorado.com/wordpress-themes/business-responsive.html" class="download">Download</a>
-			</li>
-		</ul>
-	</form>
-</div >	
-<?php }
-
 function calendar_Featured_Plugins_styles() {
-  wp_enqueue_style("Featured_Plugins", plugins_url("featured_plugins.css", __FILE__), array(), '1.4.16');
+  global $wd_spider_calendar_version;
+  wp_enqueue_style("Featured_Plugins", plugins_url("featured_plugins.css", __FILE__), array(), $wd_spider_calendar_version);
 }
-function calendar_Featured_Plugins() {  ?>
+function calendar_Featured_Plugins() { ?>
 <div id="main_featured_plugins_page">
 	<table align="center" width="90%" style="margin-top: 0px;border-bottom: rgb(111, 111, 111) solid 1px;">
 		<tr>
@@ -1277,6 +1235,128 @@ function calendar_Featured_Plugins() {  ?>
 </div>
 <?php }
 
+function calendar_Featured_themes_styles() {
+  global $wd_spider_calendar_version;
+  wp_enqueue_style("Featured_themes", plugins_url("featured_themes.css", __FILE__), array(), $wd_spider_calendar_version);
+}
+
+function calendar_Featured_themes() { ?>
+<div id="main_featured_themes_page">
+	<table align="center" width="90%" style="margin-top: 0px;border-bottom: rgb(111, 111, 111) solid 1px;">
+		<tr>
+			<td colspan="2" style="height: 40px; padding: 30px 0px 0px 0px;">
+				<h3 style="margin: 0px;font-family:Segoe UI;padding-bottom: 15px;color: rgb(111, 111, 111); font-size:18pt;">Featured Themes</h3>
+			</td>
+			<td align="right" style="font-size:16px;"></td>
+		</tr>
+	</table>
+	<form method="post">
+		<ul id="featured-plugins-list">
+			<li class="business_elite">
+				<div class="product"></div>
+				<div class="title">
+					<strong class="heading">Business Elite Theme</strong>
+				</div>
+				<div class="description">
+					<p>Business Elite is a robust parallax theme for business websites. The theme uses smooth transitions and many functional sections.</p>
+				</div>
+				<a target="_blank" href="https://web-dorado.com/wordpress-themes/business-elite.html" class="download">Download plugin >></a>
+			</li>
+			<li class="sauron">
+				<div class="product"></div>
+				<div class="title">
+					<strong class="heading">Sauron Theme</strong>
+				</div>
+				<div class="description">
+					 <p>Sauron is a multipurpose parallax theme, which uses multiple interactive sections designed for the client-engagement.</p>		
+				</div>
+				<a target="_blank" href="https://web-dorado.com/wordpress-themes/sauron.html" class="download">Download</a>
+			</li>
+			<li class="mottomag">
+				<div class="product"></div>
+				<div class="title">
+					<strong class="heading">MottoMag Theme</strong>
+				</div>
+				<div class="description">
+					<p>MottoMag is a vibrant, responsive theme which is a perfect choice for the combination of textual content with videos and images.</p>	
+				</div>
+				<a target="_blank" href="https://web-dorado.com/wordpress-themes/mottomag.html" class="download">Download</a>
+			</li>
+			<li class="business_world">
+				<div class="product"></div>
+				<div class="title">
+					<strong class="heading">Business World Theme</strong>
+				</div>
+				<div class="description">
+					<p>Business World is an innovative WordPress theme great for Business websites.</p>		 
+				</div>
+				<a target="_blank" href="https://web-dorado.com/wordpress-themes/business-world.html" class="download">Download</a>
+			</li>
+			<li class="best_magazine">
+				<div class="product"></div>
+				<div class="title">
+					<strong class="heading">Best Magazine Theme</strong>
+				</div>
+				<div class="description">
+					<p>Best Magazine is an ultimate selection when you are dealing with multi-category news websites.</p>
+				</div>
+				<a target="_blank" href="https://web-dorado.com/wordpress-themes/best-magazine.html" class="download">Download</a>
+			</li>
+			<li class="wedding_style">
+				<div class="product"></div>
+				<div class="title">
+					<strong class="heading">Wedding Style Theme</strong>
+				</div>
+				<div class="description">
+					<p>Wedding style is a responsive theme designed for the organization and maintenance of wedding websites and blogs.</p>
+				</div>
+				<a target="_blank" href="https://web-dorado.com/wordpress-themes/wedding-style.html" class="download">Download</a>
+			</li>
+			<li class="magazine">
+				<div class="product"></div>
+				<div class="title">
+					<strong class="heading">Magazine Theme</strong>
+				</div>
+				<div class="description">
+					<p>Magazine theme is a perfect solution when creating news and informational websites. It comes with a wide range of layout options.</p>	
+				</div>
+				<a target="_blank" href="https://web-dorado.com/wordpress-themes/news-magazine.html" class="download">Download</a>
+			</li>
+			<li class="weddings">
+				<div class="product"></div>
+				<div class="title">
+					<strong class="heading">Weddings Theme</strong>
+				</div>
+				<div class="description">
+					<p>Weddings is an elegant, responsive WordPress theme designed for wedding websites. The theme includes multiple pages, homepage slider and gallery support.</p>
+				</div>
+				<a target="_blank" href="https://web-dorado.com/wordpress-themes/wedding.html" class="download">Download</a>
+			</li>
+			<li class="exclusive">
+				<div class="product"></div>
+				<div class="title">
+					<strong class="heading">Exclusive Theme</strong>
+				</div>
+				<div class="description">
+					<p>Exclusive is a unique theme designed to best fit business style websites. It comes with a large list of customizable features.</p>
+				</div>
+				<a target="_blank" href="https://web-dorado.com/wordpress-themes/exclusive.html" class="download">Download</a>
+			</li>
+			<li class="expert">
+				<div class="product"></div>
+				<div class="title">
+					<strong class="heading">Expert Theme</strong>
+				</div>
+				<div class="description">
+					<p>WordPress Expert is a modern, user-friendly and stylish theme. It has a list of customizable layout, style, colors and fonts.</p>
+				</div>
+				<a target="_blank" href="https://web-dorado.com/wordpress-themes/business-responsive.html" class="download">Download</a>
+			</li>
+		</ul>
+	</form>
+</div >	
+<?php }
+
 // Activate plugin.
 function SpiderCalendar_activate() {
   global $wpdb;
@@ -1323,15 +1403,12 @@ $spider_category_event_table = "CREATE TABLE IF NOT EXISTS `" . $wpdb->prefix . 
   $wpdb->query($spider_category_event_table);
   require_once "spider_calendar_update.php";
   spider_calendar_chech_update();
+
+  
 }
 register_activation_hook(__FILE__, 'SpiderCalendar_activate');
 
-function spider_calendar_ajax_func() {
-  ?>
-  <script>
-    var spider_calendar_ajax = '<?php echo admin_url("admin-ajax.php"); ?>';
-  </script>
-  <?php
-}
-add_action('admin_head', 'spider_calendar_ajax_func');
-?>
+function spider_calendar_ajax_func() {  ?>
+  <script> var spider_calendar_ajax = '<?php echo admin_url("admin-ajax.php"); ?>'; </script>
+<?php } 
+add_action('admin_head', 'spider_calendar_ajax_func');?>

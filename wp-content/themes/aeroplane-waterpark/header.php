@@ -51,7 +51,7 @@
 			<header class="header">
 				<div class="top-header clearfix">
 					<div class="tagline pull-right">עונת 2015 נפתחת! <span>16.5</span></div>
-					<div class="site-phone pull-left">לפרטים והזמנות 09-9595757</div>
+					<div class="site-phone pull-left">לפרטים והזמנות <a href="tel:09-9595757">09-9595757</a></div>
 				</div>
 				<nav>
       			  <div class="container-fluid">
@@ -79,11 +79,12 @@
 						?>
 					</div><!--/.container-fluid -->
       			</nav>
-				<div class="tickets-top"><img src="<?php echo get_template_directory_uri(); ?>/library/images/tickets-top.png"/></div>
+				<div class="tickets-top"><a href="<?php echo home_url()?>/רכישת-כרטיסים"><img src="<?php echo get_template_directory_uri(); ?>/library/images/tickets-top.png"/></a></div>
 			</header>
-			<?php if (is_front_page()):?>				
-					<div class="video-container">
-						<img src="<?php echo get_template_directory_uri(); ?>/library/images/video.jpg"/>
+			<?php if (is_front_page()):?>
+					<div class="fullwidth">			
+						<div class="embed-responsive embed-responsive-16by9">
+							<iframe width="1280" height="720" src="https://www.youtube.com/embed/xUETMecysn4?rel=0&amp;controls=0&amp;showinfo=0" frameborder="0" allowfullscreen></iframe>
+						</div>
 					</div>
-			<?php endif;?>
-			
+			<?php endif;?>			
