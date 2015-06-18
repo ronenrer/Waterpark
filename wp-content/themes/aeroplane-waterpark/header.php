@@ -47,16 +47,16 @@
 				}(document, 'script', 'facebook-jssdk'));
 			</script>
 		<?php endif;?>
-		<div class="container">
+		<div class="container row-offcanvas row-offcanvas-right">
 			<header class="header">
-				<div class="top-header clearfix">
-					<div class="tagline pull-right">עונת 2015 נפתחת! <span>16.5</span></div>
-					<div class="site-phone pull-left">לפרטים והזמנות <a href="tel:09-9595757">09-9595757</a></div>
+				<div class="top-header hidden-xs clearfix">
+					<div class="tagline pull-right ">עונת 2015 נפתחת! <span>16.5</span></div>
+					<div class="site-phone pull-left"><span>לפרטים והזמנות </span> <a href="tel:09-9595757">09-9595757</a></div>
 				</div>
 				<nav>
       			  <div class="container-fluid">
         			  <div class="navbar-header">
-			            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+			            <button type="button" class="navbar-toggle collapsed" data-toggle="offcanvas"  aria-expanded="false" aria-controls="navbar">
 			              <span class="sr-only">Toggle navigation</span>
 			              <span class="icon-bar"></span>
 			              <span class="icon-bar"></span>
@@ -71,7 +71,7 @@
 							'depth'             => 2,
 							'container'         => 'div',
 							'container_id'   	=>	'navbar' ,
-							'container_class'   => 'collapse navbar-collapse navbar-ex1-collapse',
+							'container_class'   => 'sidebar-offcanvas clearfix',
 							'menu_class'        => 'nav navbar-nav',
 							'fallback_cb'       => 'wp_bootstrap_navwalker::fallback',
 							'walker'            => new wp_bootstrap_navwalker())
@@ -82,9 +82,12 @@
 				<div class="tickets-top"><a href="<?php echo home_url()?>/רכישת-כרטיסים"><img src="<?php echo get_template_directory_uri(); ?>/library/images/tickets-top.png"/></a></div>
 			</header>
 			<?php if (is_front_page()):?>
-					<div class="fullwidth">			
+					<div class="fullwidth video-container">		
 						<div class="embed-responsive embed-responsive-16by9">
-							<iframe width="1280" height="720" src="https://www.youtube.com/embed/xUETMecysn4?rel=0&amp;controls=0&amp;showinfo=0" frameborder="0" allowfullscreen></iframe>
+							<video width="1920" height="720" poster="<?php echo get_stylesheet_directory_uri()?>/library/images/home-video-poster.jpg" autoplay>
+				     		   <source src="<?php echo get_stylesheet_directory_uri()?>/library/images/home-video.mp4" type="video/mp4">
+				    		</video>	
+							<!--iframe id="ytplayer" width="1280" height="720" src="https://www.youtube.com/embed/xUETMecysn4?rel=0&amp;controls=0&amp;volume=0&amp;showinfo=0&amp;autoplay=1&amp;loop=1&amp;enablejsapi=1" frameborder="0" allowfullscreen></iframe-->
 						</div>
 					</div>
 			<?php endif;?>			

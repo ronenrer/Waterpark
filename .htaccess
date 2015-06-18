@@ -2,11 +2,11 @@
 # BEGIN WordPress
 <IfModule mod_rewrite.c>
 RewriteEngine On
-RewriteBase /waterpark/
+RewriteBase /1814WaterParkDev/
 RewriteRule ^index\.php$ - [L]
 RewriteCond %{REQUEST_FILENAME} !-f
 RewriteCond %{REQUEST_FILENAME} !-d
-RewriteRule . /waterpark/index.php [L]
+RewriteRule . /1814WaterParkDev/index.php [L]
 </IfModule>
 
-# END WordPress
+# END WordPres

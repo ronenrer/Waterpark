@@ -112,9 +112,14 @@ jQuery(document).ready(function($) {
    * You can remove this if you don't need it
   */
   loadGravatars();
-  $('.gform_button').addClass('btn btn-primary btn-lg');
-
- 
+  if( viewport.width >= 992 ) {   
+    $('#navbar .menu-item-has-children').hover(function() {
+      $(this).find('.dropdown-menu').first().stop(true, true).slideDown(100);
+    }, function() {
+      $(this).find('.dropdown-menu').first().stop(true, true).slideUp(110);
+    });
+  }
+  $('.gform_button').addClass('btn btn-primary btn-lg'); 
   $('.panel-heading a').each(function() {
       $(this).click(function() {     
         if ($(this).parents("div.panel").hasClass('active')){
@@ -125,5 +130,24 @@ jQuery(document).ready(function($) {
         }
       });
   });
+
+  $('[data-toggle="offcanvas"]').click(function () {
+    $('.row-offcanvas').toggleClass('active');
+  });
+  $('.cell_body td a').click(function(e){
+       e.preventDefault();
+       e.stopImmediatePropagation(); //charles ma is right about that, but stopPropagation isn't also needed
+  });
+
+ /*var image = new Array ();
+  image[0] = 'http://www.waterpark.aeroplane.co.il/wp-content/themes/aeroplane-waterpark/library/images/family/family1.png';
+  image[1] = 'http://www.waterpark.aeroplane.co.il/wp-content/themes/aeroplane-waterpark/library/images/family/family2.png';
+  image[2] = 'http://www.waterpark.aeroplane.co.il/wp-content/themes/aeroplane-waterpark/library/images/family/family3.png';
+  image[3] = 'http://www.waterpark.aeroplane.co.il/wp-content/themes/aeroplane-waterpark/library/images/family/family4.png';
+  image[4] = 'http://www.waterpark.aeroplane.co.il/wp-content/themes/aeroplane-waterpark/library/images/family/family5.png';
+  var size = image.length;
+  var x = Math.floor(size*Math.random());
+
+$('img#random').attr('src',image[x]); */
 
 }); /* end of as page load scripts */

@@ -1,4 +1,4 @@
-				<div id="sidebar1" class="sidebar col-sm-3" role="complementary">
+				<div id="sidebar1" class="sidebar col-sm-3 clearfix" role="complementary">
 					<h4 class="widgettitle">היום בפארק</h4>
 					<div class="row nomargin">
 						<div class="col-xs-6 current-info">

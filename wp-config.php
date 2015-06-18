@@ -1,4 +1,6 @@
 <?php
+define('WP_HOME','http://dev.waterpark.co.il.smsite.net/');
+define('WP_SITEURL','http://dev.waterpark.co.il.smsite.net/');
 /**
  * The base configurations of the WordPress.
  *
@@ -16,13 +18,13 @@
 
 // ** MySQL settings - You can get this info from your web host ** //
 /** The name of the database for WordPress */
-define('DB_NAME', 'db_water');
+define('DB_NAME', 'waterpark_db');
 
 /** MySQL database username */
-define('DB_USER', 'root');
+define('DB_USER', 'waterpark_usr');
 
 /** MySQL database password */
-define('DB_PASSWORD', 'root');
+define('DB_PASSWORD', 'W4(t3r%P4rk^Sms)1');
 
 /** MySQL hostname */
 define('DB_HOST', 'localhost');
@@ -61,6 +63,12 @@ define('NONCE_SALT',       'put your unique phrase here');
  */
 $table_prefix  = 'wp_';
 
+define ('WPLANG', 'he_IL');
+
+// custom handle hebrew url
+if(isset($_SERVER['UNENCODED_URL']))
+    $_SERVER['REQUEST_URI'] = $_SERVER['UNENCODED_URL'];
+
 /**
  * For developers: WordPress debugging mode.
  *
@@ -75,6 +83,8 @@ define('WP_DEBUG', false);
 /** Absolute path to the WordPress directory. */
 if ( !defined('ABSPATH') )
 	define('ABSPATH', dirname(__FILE__) . '/');
+
+
 
 /** Sets up WordPress vars and included files. */
 require_once(ABSPATH . 'wp-settings.php');

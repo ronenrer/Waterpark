@@ -21,7 +21,8 @@
 				<div id="inner-footer" class="wrap clearfix">
 					<div class="row">
 						<div class="col-xs-6 col-sm-4">
-							<?php dynamic_sidebar( 'footer1' ); ?>
+							<img id='random' src="<?php echo get_stylesheet_directory_uri()?>/library/images/family/family1.png" />
+							<?php //dynamic_sidebar( 'footer1' ); ?>
 						</div>
 						<div class="col-xs-6 col-sm-2 contact-info">
 							<?php dynamic_sidebar( 'footer2' ); ?>
