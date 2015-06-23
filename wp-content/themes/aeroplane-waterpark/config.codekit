@@ -1110,6 +1110,17 @@
 		"outputPathIsSetByUser": 0,
 		"processed": 0
 		},
+	"\/library\/images\/family\/family1.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 61954,
+		"inputAbbreviatedPath": "\/library\/images\/family\/family1.png",
+		"outputAbbreviatedPath": "\/library\/images\/family\/family1.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
 	"\/library\/images\/family1.png": {
 		"fileType": 32768,
 		"ignore": 0,
@@ -1117,6 +1128,17 @@
 		"initialSize": 97412,
 		"inputAbbreviatedPath": "\/library\/images\/family1.png",
 		"outputAbbreviatedPath": "\/library\/images\/family1.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/library\/images\/gallery.jpg": {
+		"fileType": 16384,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 44547,
+		"inputAbbreviatedPath": "\/library\/images\/gallery.jpg",
+		"outputAbbreviatedPath": "\/library\/images\/gallery.jpg",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"processed": 0
@@ -1308,6 +1330,17 @@
 		"outputPathIsSetByUser": 0,
 		"processed": 0
 		},
+	"\/library\/images\/ticket_banner.jpg": {
+		"fileType": 16384,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 75204,
+		"inputAbbreviatedPath": "\/library\/images\/ticket_banner.jpg",
+		"outputAbbreviatedPath": "\/library\/images\/ticket_banner.jpg",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
 	"\/library\/images\/tickets-top.png": {
 		"fileType": 32768,
 		"ignore": 0,
@@ -1424,6 +1457,15 @@
 		"strictImports": 0,
 		"strictMath": 0,
 		"strictUnits": 0
+		},
+	"\/library\/translation\/translation.php": {
+		"fileType": 8192,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/library\/translation\/translation.php",
+		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
 		},
 	"\/library\/variables.less": {
 		"allowInsecureImports": 0,

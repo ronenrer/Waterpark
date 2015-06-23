@@ -50,7 +50,7 @@
 		<div class="container row-offcanvas row-offcanvas-right">
 			<header class="header">
 				<div class="top-header hidden-xs clearfix">
-					<div class="tagline pull-right ">עונת 2015 נפתחת! <span>16.5</span></div>
+					<div class="tagline pull-right ">החוויה המשפחתית <span>של הקיץ</span></div>
 					<div class="site-phone pull-left"><span>לפרטים והזמנות </span> <a href="tel:09-9595757">09-9595757</a></div>
 				</div>
 				<nav>
@@ -83,11 +83,9 @@
 			</header>
 			<?php if (is_front_page()):?>
 					<div class="fullwidth video-container">		
-						<div class="embed-responsive embed-responsive-16by9">
-							<video width="1920" height="720" poster="<?php echo get_stylesheet_directory_uri()?>/library/images/home-video-poster.jpg" autoplay>
-				     		   <source src="<?php echo get_stylesheet_directory_uri()?>/library/images/home-video.mp4" type="video/mp4">
-				    		</video>	
-							<!--iframe id="ytplayer" width="1280" height="720" src="https://www.youtube.com/embed/xUETMecysn4?rel=0&amp;controls=0&amp;volume=0&amp;showinfo=0&amp;autoplay=1&amp;loop=1&amp;enablejsapi=1" frameborder="0" allowfullscreen></iframe-->
-						</div>
+						<video width="100%" height="auto" poster="<?php echo get_stylesheet_directory_uri()?>/library/images/home-video-poster.jpg" autoplay>
+			     		   <source src="<?php echo get_stylesheet_directory_uri()?>/library/images/home-video.mp4" type="video/mp4">
+			    		</video>	
+						<!--iframe id="ytplayer" width="1280" height="720" src="https://www.youtube.com/embed/xUETMecysn4?rel=0&amp;controls=0&amp;volume=0&amp;showinfo=0&amp;autoplay=1&amp;loop=1&amp;enablejsapi=1" frameborder="0" allowfullscreen></iframe-->
 					</div>
 			<?php endif;?>			

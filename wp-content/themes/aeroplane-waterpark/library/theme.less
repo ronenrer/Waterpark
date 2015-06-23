@@ -269,7 +269,7 @@ img{max-width:100%;height:auto;}
 			&:first-child{border-right:0 !important;}	
 			&:last-child{border-left:0 !important;}		
 			#cat_width b{color:#fff !important;}
-			a{pointer-events: none;}
+			a{}
 
 		}
 		&.days{
@@ -281,6 +281,7 @@ img{max-width:100%;height:auto;}
 			}
 		}
 	}
+	#calendar_1 .cala_day a:hover{font-size:13px !important;}
 }
 #cats_widget_1{
 	padding:12px ;
@@ -304,6 +305,7 @@ img{max-width:100%;height:auto;}
 		}
 	}
 }
+#TB_overlay{background:none !important;}
 #widget_sp_image-6{
 	padding: 2px 0;
   	border-top: 1px solid @brand-accent;
@@ -551,9 +553,9 @@ ACCORDION
   		background-attachment: fixed;
   	}
   	.top-header{
-  		padding: 8px 20% 0 25%;
+  		padding: 8px 18% 0 25%;
   		.tagline{
-  			font-size: 28px;
+  			font-size: 26px;
   			font-weight:700;
   			color:@brand-primary;
   			span{color:@brand-accent;}
@@ -614,7 +616,7 @@ ACCORDION
  	.tagline{
  		position: absolute;
 		  top: 60px;
-		  left: 172px;
+		  right: 265px;
 	}
 	.site-phone{
 		margin-left:60px;
@@ -668,8 +670,8 @@ ACCORDION
 		}
 	}
 	ul#menu-main{
-		padding-right:20%;
-		margin:20px 0;
+		padding-right:21%;
+		margin:30px 0 20px;
 		> li{
 			> a{
 				border-left:1px solid @text-color;
@@ -731,7 +733,9 @@ ACCORDION
 		
  }
 @media (min-width:@screen-lg-desktop){
-	ul#menu-main{padding-right:21%;}
+	ul#menu-main{
+		margin-top:18px;
+	}
 	.site-phone span{display:inline !important;}
 	.top-header{
 		padding-left:22%;

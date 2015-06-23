@@ -39,9 +39,9 @@ Template Name: Homepage
 						        </div>
 						         <div class="col-xs-6 col-sm-12 col-md-6">
 						        	<div class="feature">
-							        	<img src="<?php echo get_stylesheet_directory_uri()?>/library/images/discounts.jpg"/>
-							        	<h3>כרטיסים מוזלים</h3>
-							        	<a class="view" href="<?php echo home_url()?>/רכישת-כרטיסים"/>קראו עוד</a>
+							        	<img src="<?php echo get_stylesheet_directory_uri()?>/library/images/gallery.jpg"/>
+							        	<h3>סרטונים וגלריה</h3>
+							        	<a class="view" href="<?php echo home_url()?>/גלריה"/>קראו עוד</a>
 							        </div>
 						        </div>
 						      </div>

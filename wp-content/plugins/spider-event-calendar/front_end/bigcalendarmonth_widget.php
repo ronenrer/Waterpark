@@ -515,47 +515,20 @@ $cat_ids = substr($cat_ids, 0,-1);
     if (($weekday_i % 7 == 0 and $weekstart == "mo") or ($weekday_i % 7 == 1 and $weekstart == "su")) {
       if ($i == $day_REFERER and $month == $month_REFERER and $year == $year_REFERER) {
 
-        echo  ' <td class="cala_day" style="background-color:' . $bg_color_selected . ';text-align:center;padding:0 !important; margin:0;line-height:inherit;">
+        echo  '<td class="cala_day 1" style="background-color:' . $bg_color_selected . ';text-align:center;padding:0 !important; margin:0;line-height:inherit;">
                   <div class="calborder_day" style="text-align:center; width:' . $cell_width . 'px; margin:0; padding:0;">
-                    <a class="thickbox-previewbigcalendar' . $many_sp_calendar . '" style="background:none;color:' . $text_color_selected . '; text-decoration:underline;"
-                      href="' . add_query_arg(array(
-                        'action' => ((isset($ev_id[1])) ? 'spiderseemore' : 'spidercalendarbig'),
-                        'theme_id' => $theme_id,
-                        'calendar_id' => $calendar_id,
-                        'ev_ids' => $ev_ids_inline,
-                        'eventID' => $ev_id[0],
-                        'date' => $year . '-' . add_0(Month_num($month)) . '-' . $i,
-                        'many_sp_calendar' => $many_sp_calendar,
-                        'cur_page_url' => $path_sp_cal,
-                        'widget' => $widget,
-                        'TB_iframe' => 1,
-                        'tbWidth' => $popup_width,
-                        'tbHeight' => $popup_height,
-                        ), $site_url) . '"><b>' . $i . '</b>
-                    </a>
-                  </div>
-				  </td>';
+                    <a class="' . $many_sp_calendar . '" data-container="body" data-toggle="tooltip" data-placement="top" title="'.strip_tags($title[$i]) .'" style="background:none;color:' . $text_color_selected . '; text-decoration:underline;">';
+                     foreach($categ_color as $color){
+                      echo '<span id="cat_width"  style="background-color:#'.str_replace('#','',$color->color).'; display:block;"><b>' . $i . '</b></span>';
+                     }
+                   echo '</a></div></td>';
       }
       elseif ($i == date('j') and $month == date('F') and $year == date('Y')) {
         if (in_array($i, $array_days)) {
           if (in_array ($i, $array_days1)) {
             echo '
-                <td class="cala_day" style="color:' . $text_color_selected . ';background-color:' . $bg_color_selected . ';text-align:center;padding:0 !important; margin:0;line-height:35px; border: 1px solid ' . $border_day . '">
-                  <a class="thickbox-previewbigcalendar' . $many_sp_calendar . '" style="background:none;color:' . $text_color_selected . ';text-align:center;text-decoration:underline;"
-                    href="' . add_query_arg(array(
-                      'action' => ((isset($ev_id[1])) ? 'spiderseemore' : 'spidercalendarbig'),
-                      'theme_id' => $theme_id,
-                      'calendar_id' => $calendar_id,
-                      'ev_ids' => $ev_ids_inline,
-                      'eventID' => $ev_id[0],
-                      'date' => $year . '-' . add_0(Month_num($month)) . '-' . $i,
-                      'many_sp_calendar' => $many_sp_calendar,
-                      'cur_page_url' => $path_sp_cal,
-                      'widget' => $widget,
-                      'TB_iframe' => 1,
-                      'tbWidth' => $popup_width,
-                      'tbHeight' => $popup_height,
-                      ), $site_url) . '">';
+                <td class="cala_day 2" style="color:' . $text_color_selected . ';background-color:' . $bg_color_selected . ';text-align:center;padding:0 !important; margin:0;line-height:35px; border: 1px solid ' . $border_day . '">
+                  <a class="' . $many_sp_calendar . '" data-container="body" data-toggle="tooltip" data-placement="top" title="'.strip_tags($title[$i]) .'" style="background:none;color:' . $text_color_selected . ';text-align:center;text-decoration:underline;״>';
                   foreach($categ_color as $color){
                       echo '<span id="cat_width"  style="background-color:#'.str_replace('#','',$color->color).'; display:block;"><b>' . $i . '</b></span>';
                      }
@@ -564,28 +537,16 @@ $cat_ids = substr($cat_ids, 0,-1);
           }
           else {
             echo '
-                <td class="cala_day" style="color:' . $text_color_selected . ';background-color:' . $bg_color_selected . ';text-align:center;padding:0 !important; margin:0;line-height:35px; border: 1px solid ' . $border_day . '">
-                  <a class="thickbox-previewbigcalendar' . $many_sp_calendar . '" style="background:none;color:' . $text_color_selected . ';text-align:center;text-decoration:underline;" 
-                    href="' . add_query_arg(array(
-                      'action' => ((isset($ev_id[1])) ? 'spiderseemore' : 'spidercalendarbig'),
-                      'theme_id' => $theme_id,
-                      'calendar_id' => $calendar_id,
-                      'ev_ids' => $ev_ids_inline,
-                      'eventID' => $ev_id[0],
-                      'date' => $year . '-' . add_0(Month_num($month)) . '-' . $i,
-                      'many_sp_calendar' => $many_sp_calendar,
-                      'cur_page_url' => $path_sp_cal,
-                      'widget' => $widget,
-                      'TB_iframe' => 1,
-                      'tbWidth' => $popup_width,
-                      'tbHeight' => $popup_height,
-                      ), $site_url) . '">';
+                <td class="cala_day 3" style="color:' . $text_color_selected . ';background-color:' . $bg_color_selected . ';text-align:center;padding:0 !important; margin:0;line-height:35px; border: 1px solid ' . $border_day . '">
+                  <a class="' . $many_sp_calendar . '" data-container="body" data-toggle="tooltip" data-placement="top" title="'.strip_tags($title[$i]) .'" style="background:none;color:' . $text_color_selected . ';text-align:center;text-decoration:underline;">';
                 foreach($categ_color as $color){
                       echo '<span id="cat_width"  style="background-color:#'.str_replace('#','',$color->color).'; display:block;"><b>' . $i . '</b></span>';
                      }
                   echo '</a>';
                     echo '</td>';
                }
+            }
+          else {
           echo '
                 <td class="calsun_days" style="color:' . $text_color_selected . ';text-align:center;padding:0; margin:0;line-height:inherit; border: 1px solid ' . $border_day . '">
                   <b>' . $i . '</b>
@@ -597,23 +558,8 @@ $cat_ids = substr($cat_ids, 0,-1);
           if (in_array ($i, $array_days1)) {
 		    
             echo '
-                <td class="cala_day" style="background-color:' . $evented_color_bg . ';text-align:center;padding:0; margin:0;line-height:35px;">
-                  <a class="thickbox-previewbigcalendar' . $many_sp_calendar . '" style="background:none;color:' . $evented_color . ';text-align:center;text-decoration:underline;"
-                    href="' . add_query_arg(array(
-                      'action' => ((isset($ev_id[1])) ? 'spiderseemore' : 'spidercalendarbig'),
-                      'theme_id' => $theme_id,
-                      'calendar_id' => $calendar_id,
-                      'ev_ids' => $ev_ids_inline,
-                      'eventID' => $ev_id[0],
-                      'date' => $year . '-' . add_0(Month_num($month)) . '-' . $i,
-                      'many_sp_calendar' => $many_sp_calendar,
-                      'cur_page_url' => $path_sp_cal,
-                      'widget' => $widget,
-                      'TB_iframe' => 1,
-                      'tbWidth' => $popup_width,
-                      'tbHeight' => $popup_height,
-					  'cat_id' => $cat_ids
-                      ), $site_url) . '">';
+                <td class="cala_day 4" style="background-color:' . $evented_color_bg . ';text-align:center;padding:0; margin:0;line-height:35px;">
+                  <a class="' . $many_sp_calendar . '" data-container="body" data-toggle="tooltip" data-placement="top" title="'.strip_tags($title[$i]) .'" style="background:none;color:' . $evented_color . ';text-align:center;text-decoration:underline;">';
                  foreach($categ_color as $color){
                       echo '<span id="cat_width"  style="background-color:#'.str_replace('#','',$color->color).'; display:block;"><b>' . $i . '</b></span>';
                      }
@@ -622,23 +568,8 @@ $cat_ids = substr($cat_ids, 0,-1);
           }
           else {
             echo '
-                <td class="cala_day" style="background-color:' . $evented_color_bg . ';text-align:center;padding:0 !important; margin:0;line-height:35px;">
-                  <a class="thickbox-previewbigcalendar' . $many_sp_calendar . '" style="background:none;color:' . $evented_color . ';text-align:center;text-decoration:underline;"
-                    href="' . add_query_arg(array(
-                      'action' => ((isset($ev_id[1])) ? 'spiderseemore' : 'spidercalendarbig'),
-                      'theme_id' => $theme_id,
-                      'calendar_id' => $calendar_id,
-                      'ev_ids' => $ev_ids_inline,
-                      'eventID' => $ev_id[0],
-                      'date' => $year . '-' . add_0(Month_num($month)) . '-' . $i,
-                      'many_sp_calendar' => $many_sp_calendar,
-                      'cur_page_url' => $path_sp_cal,
-                      'widget' => $widget,
-                      'TB_iframe' => 1,
-                      'tbWidth' => $popup_width,
-                      'tbHeight' => $popup_height,
-					  'cat_id' => $cat_ids
-                      ), $site_url) . '">';
+                <td class="cala_day 5" style="background-color:' . $evented_color_bg . ';text-align:center;padding:0 !important; margin:0;line-height:35px;">
+                  <a class="' . $many_sp_calendar . '" data-container="body" data-toggle="tooltip" data-placement="top" title="'.strip_tags($title[$i]) .'" style="background:none;color:' . $evented_color . ';text-align:center;text-decoration:underline;">';
                  foreach($categ_color as $color){
                       echo '<span id="cat_width"  style="background-color:#'.str_replace('#','',$color->color).'; display:block;"><b>' . $i . '</b></span>';
                      }
@@ -659,23 +590,8 @@ $cat_ids = substr($cat_ids, 0,-1);
 if (in_array ($i,$array_days)) {
 
       echo '    <td style="background-color:' . $bg_color_selected . ';text-align:center;padding:0 !important ; margin:0;line-height:35px;">
-                  <div class="calborder_day" style="text-align:center; width:' . $cell_width . 'px; margin:0; padding:0;">
-                    <a class="thickbox-previewbigcalendar' . $many_sp_calendar . '" style="background:none;color:' . $text_color_selected . '; text-decoration:underline;"
-                      href="' . add_query_arg(array(
-                      'action' => ((isset($ev_id[1])) ? 'spiderseemore' : 'spidercalendarbig'),
-                      'theme_id' => $theme_id,
-                      'calendar_id' => $calendar_id,
-                      'ev_ids' => $ev_ids_inline,
-                      'eventID' => $ev_id[0],
-                      'date' => $year . '-' . add_0(Month_num($month)) . '-' . $i,
-                      'many_sp_calendar' => $many_sp_calendar,
-                      'cur_page_url' => $path_sp_cal,
-                      'widget' => $widget,
-                      'TB_iframe' => 1,
-                      'tbWidth' => $popup_width,
-                      'tbHeight' => $popup_height,
-					  'cat_id' => $cat_ids
-                      ), $site_url) . '">';
+                  <div class="calborder_day 6" style="text-align:center; width:' . $cell_width . 'px; margin:0; padding:0;">
+                    <a class="' . $many_sp_calendar . '" data-container="body" data-toggle="tooltip" data-placement="top" title="'.strip_tags($title[$i]) .'" style="background:none;color:' . $text_color_selected . '; text-decoration:underline;">';
                  foreach($categ_color as $color){
                       echo '<span id="cat_width"  style="background-color:#'.str_replace('#','',$color->color).'; display:block;"><b>' . $i . '</b></span>';
                      }
@@ -701,22 +617,7 @@ if (in_array ($i,$array_days)) {
           if (in_array ($i, $array_days1)) {
             echo '
                 <td class="cala_day" style="color:' . $text_color_selected . ';background-color:' . $bg_color_selected . ';text-align:center;padding:0 !important; margin:0;line-height:35px; border: 1px solid ' . $border_day . '">
-                  <a class="thickbox-previewbigcalendar' . $many_sp_calendar . '" style="background:none;color:' . $text_color_selected . '; text-align:center;text-decoration:underline;"
-                    href="' . add_query_arg(array(
-                      'action' => ((isset($ev_id[1])) ? 'spiderseemore' : 'spidercalendarbig'),
-                      'theme_id' => $theme_id,
-                      'calendar_id' => $calendar_id,
-                      'ev_ids' => $ev_ids_inline,
-                      'eventID' => $ev_id[0],
-                      'date' => $year . '-' . add_0(Month_num($month)) . '-' . $i,
-                      'many_sp_calendar' => $many_sp_calendar,
-                      'cur_page_url' => $path_sp_cal,
-                      'widget' => $widget,
-                      'TB_iframe' => 1,
-                      'tbWidth' => $popup_width,
-                      'tbHeight' => $popup_height,
-					  'cat_id' => $cat_ids
-                      ), $site_url) . '">';
+                  <a data-container="body" data-toggle="tooltip" data-placement="top" title="'.strip_tags($title[$i]) .'" class="' . $many_sp_calendar . '" style="background:none;color:' . $text_color_selected . '; text-align:center;text-decoration:underline;">';
                   foreach($categ_color as $color){
                       echo '<span id="cat_width"  style="background-color:#'.str_replace('#','',$color->color).'; display:block;"><b>' . $i . '</b></span>';
                      }
@@ -725,25 +626,10 @@ if (in_array ($i,$array_days)) {
           }
           else {
             echo '
-                <td class="cala_day" style="color:' . $text_color_selected . ';background-color:' . $bg_color_selected . ';text-align:center;padding:0 !important; margin:0;line-height:35px; border: 1px solid ' . $border_day . '">
-                  <a id="cur_day" class="thickbox-previewbigcalendar' . $many_sp_calendar . '" style="background:none;color:' . $text_color_selected . '; text-align:center;text-decoration:underline;display:block"
-                    href="' . add_query_arg(array(
-                      'action' => ((isset($ev_id[1])) ? 'spiderseemore' : 'spidercalendarbig'),
-                      'theme_id' => $theme_id,
-                      'calendar_id' => $calendar_id,
-                      'ev_ids' => $ev_ids_inline,
-                      'eventID' => $ev_id[0],
-                      'date' => $year . '-' . add_0(Month_num($month)) . '-' . $i,
-                      'many_sp_calendar' => $many_sp_calendar,
-                      'cur_page_url' => $path_sp_cal,
-                      'widget' => $widget,
-                      'TB_iframe' => 1,
-                      'tbWidth' => $popup_width,
-                      'tbHeight' => $popup_height,
-					  'cat_id' => $cat_ids
-                      ), $site_url) . '">';
+                <td class="cala_day 7" style="color:' . $text_color_selected . ';background-color:' . $bg_color_selected . ';text-align:center;padding:0 !important; margin:0;line-height:35px; border: 1px solid ' . $border_day . '">
+                  <a id="cur_day data-container="body" data-toggle="tooltip" data-placement="top" title="'.strip_tags($title[$i]) .'" class="' . $many_sp_calendar . '" style="background:none;color:' . $text_color_selected . '; text-align:center;text-decoration:underline;display:block">';
                     foreach($categ_color as $color){
-                      echo '<span id="cat_width"  style="background-color:#'.str_replace('#','',$color->color).'; display:block;"><b>' . $i . '</b></span>';
+                      echo '<span id="cat_width"  style="background-color:#'.str_replace('#','',$color->color).'; display:block;"><b>' . $i .'</b></span>';
                      }
                   echo '</a>';
 					echo '</td>';
@@ -759,56 +645,25 @@ if (in_array ($i,$array_days)) {
       elseif (in_array($i, $array_days)) {
 	  
         if (in_array ($i, $array_days1)) {
-          echo '<td class="cala_day" style="background-color:' . $evented_color_bg . ';text-align:center;padding:0 !important; margin:0;line-height:inherit;">
-                  <a class="thickbox-previewbigcalendar' . $many_sp_calendar . '" style="background:none;color:' . $evented_color . '; text-align:center;text-decoration:underline;"
-                  href="' . add_query_arg(array(
-                      'action' => ((isset($ev_id[1])) ? 'spiderseemore' : 'spidercalendarbig'),
-                      'theme_id' => $theme_id,
-                      'calendar_id' => $calendar_id,
-                      'ev_ids' => $ev_ids_inline,
-                      'eventID' => $ev_id[0],
-                      'date' => $year . '-' . add_0(Month_num($month)) . '-' . $i,
-                      'many_sp_calendar' => $many_sp_calendar,
-                      'cur_page_url' => $path_sp_cal,
-                      'widget' => $widget,
-                      'TB_iframe' => 1,
-                      'tbWidth' => $popup_width,
-                      'tbHeight' => $popup_height,
-					  'cat_id' => $cat_ids
-                      ), $site_url) . '">';
+          echo '<td class="cala_day 8" style="background-color:' . $evented_color_bg . ';text-align:center;padding:0 !important; margin:0;line-height:inherit;">
+                  <a data-container="body" data-toggle="tooltip" data-placement="top" title="'.strip_tags($title[$i]) .'" class="'. $many_sp_calendar . '" style="background:none;color:' . $evented_color . '; text-align:center;text-decoration:underline;">';
                   foreach($categ_color as $color){
-                      echo '<span id="cat_width"  style="background-color:#'.str_replace('#','',$color->color).'; display:block;"><b>' . $i . '</b></span>';
+                      echo '<span id="cat_width"  style="background-color:#'.str_replace('#','',$color->color).'; display:block;"><b>' . $i .'</b></span>';
                      }
                   echo '</a>';
 					echo '</td>';
         }
         else {
-          echo '<td class="cala_day" style="background-color:' . $evented_color_bg . ';text-align:center;padding:0 !important; margin:0;line-height:35px;">
-                  <a class="thickbox-previewbigcalendar' . $many_sp_calendar . '" style="background:none;color:' . $evented_color . '; text-align:center;text-decoration:underline;"
-                    href="' . add_query_arg(array(
-                      'action' => ((isset($ev_id[1])) ? 'spiderseemore' : 'spidercalendarbig'),
-                      'theme_id' => $theme_id,
-                      'calendar_id' => $calendar_id,
-                      'ev_ids' => $ev_ids_inline,
-                      'eventID' => $ev_id[0],
-                      'date' => $year . '-' . add_0(Month_num($month)) . '-' . $i,
-                      'many_sp_calendar' => $many_sp_calendar,
-                      'cur_page_url' => $path_sp_cal,
-                      'widget' => $widget,
-                      'TB_iframe' => 1,
-                      'tbWidth' => $popup_width,
-                      'tbHeight' => $popup_height,
-					  'cat_id' => $cat_ids
-                      ), $site_url) . '">';
+          echo '<td class="cala_day 9" style="background-color:' . $evented_color_bg . ';text-align:center;padding:0 !important; margin:0;line-height:35px;">
+                  <a data-container="body" data-toggle="tooltip" data-placement="top" title="'.strip_tags($title[$i]) .'" class="' . $many_sp_calendar . '" style="background:none;color:' . $evented_color . '; text-align:center;text-decoration:underline;">';
                     foreach($categ_color as $color){
-                      echo '<span id="cat_width"  style="background-color:#'.str_replace('#','',$color->color).'; display:block;"><b>' . $i . '</b></span>';
+                      echo '<span id="cat_width"  style="background-color:#'.str_replace('#','',$color->color).'; display:block;"><b>' . $i .'</b></span>';
                      }
                   echo '</a>';
                  echo '</td>';
 					echo '</td>';
         }
-			}
-      else {
+			}      else {
         echo '  <td style="text-align:center; color:' . $text_color_this_month_unevented . ';padding:0; margin:0; line-height:inherit;">
                   <b>' . $i . '</b>
                 </td>';

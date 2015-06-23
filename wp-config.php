@@ -1,6 +1,6 @@
 <?php
-define('WP_HOME','http://dev.waterpark.co.il.smsite.net/');
-define('WP_SITEURL','http://dev.waterpark.co.il.smsite.net/');
+define('WP_HOME','http://waterpark.co.il');
+define('WP_SITEURL','http://waterpark.co.il');
 /**
  * The base configurations of the WordPress.
  *

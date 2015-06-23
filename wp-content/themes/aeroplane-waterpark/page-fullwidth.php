@@ -6,10 +6,14 @@ Template Name: Fullwidth
 get_header(); ?>
 
 			<div id="content">
-				<?php $header_bg = get_field('header_pic');
+				<?php 
+				$default_header_bg = get_field('header_pic',option);
+				$header_bg = get_field('header_pic');
 				$header_style ='';
 				if (!empty($header_bg)) {
 					$header_style = 'style="background-image:url('.$header_bg.');"';
+				}else{
+					$header_style = 'style="background-image:url('.$default_header_bg.');"';
 				}?>
 				<header class="article-header fullwidth" <?php echo $header_style ?>>
 					<h1 class="page-title" itemprop="headline"><?php the_title(); ?></h1>

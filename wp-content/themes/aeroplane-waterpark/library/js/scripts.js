@@ -138,7 +138,12 @@ jQuery(document).ready(function($) {
        e.preventDefault();
        e.stopImmediatePropagation(); //charles ma is right about that, but stopPropagation isn't also needed
   });
-
+  $(function () {
+    $('[data-toggle="popover"]').popover();
+  });
+   $(function () {
+    $('[data-toggle="tooltip"]').tooltip();
+  });
  /*var image = new Array ();
   image[0] = 'http://www.waterpark.aeroplane.co.il/wp-content/themes/aeroplane-waterpark/library/images/family/family1.png';
   image[1] = 'http://www.waterpark.aeroplane.co.il/wp-content/themes/aeroplane-waterpark/library/images/family/family2.png';

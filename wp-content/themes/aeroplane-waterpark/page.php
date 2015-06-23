@@ -1,10 +1,14 @@
 <?php get_header(); ?>
 
 			<div id="content">
-				<?php $header_bg = get_field('header_pic');
+				<?php 
+				$default_header_bg = get_field('default_header_pic',option);
+				$header_bg = get_field('header_pic');
 				$header_style ='';
 				if (!empty($header_bg)) {
 					$header_style = 'style="background-image:url('.$header_bg.');"';
+				}else{
+					$header_style = 'style="background-image:url('.$default_header_bg.');"';
 				}?>
 				<header class="article-header fullwidth" <?php echo $header_style ?>>
 					<h1 class="page-title" itemprop="headline"><?php the_title(); ?></h1>
@@ -31,6 +35,7 @@
 											<li>ילד מגיל שנתיים ומעלה חייב בכרטיס כניסה לפארק המים שפיים. המחיר אחיד לילד ולמבוגר.</li>
 											<li>בעולם הקאריבי לילדים מותקנות <strong>140 מזרקות מים</strong>. ניתן לתזמן אותן למוזיקה ולתאורה.</li>
 											<li>דלי המים הענק באותו מתחם מתרוקן לצהלות הילדים בכל <strong>4 דקות</strong>.</li>
+											<li>מגלשת הקרייזי קונס היא <strong>היחידה מסוגה בארץ</strong>.</li>
 										</ol>
 									<?php endif;?>
 									<?php 
