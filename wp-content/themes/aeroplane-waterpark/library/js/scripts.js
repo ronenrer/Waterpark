@@ -144,12 +144,15 @@ jQuery(document).ready(function($) {
    $(function () {
     $('[data-toggle="tooltip"]').tooltip();
   });
+   $('.home .video-container').click(function(){
+    window.location = 'http://www.waterpark.co.il/רכישת-כרטיסים/';
+  });
  /*var image = new Array ();
-  image[0] = 'http://www.waterpark.aeroplane.co.il/wp-content/themes/aeroplane-waterpark/library/images/family/family1.png';
-  image[1] = 'http://www.waterpark.aeroplane.co.il/wp-content/themes/aeroplane-waterpark/library/images/family/family2.png';
-  image[2] = 'http://www.waterpark.aeroplane.co.il/wp-content/themes/aeroplane-waterpark/library/images/family/family3.png';
-  image[3] = 'http://www.waterpark.aeroplane.co.il/wp-content/themes/aeroplane-waterpark/library/images/family/family4.png';
-  image[4] = 'http://www.waterpark.aeroplane.co.il/wp-content/themes/aeroplane-waterpark/library/images/family/family5.png';
+  image[0] = 'http://www.waterpark.co.il/wp-content/themes/aeroplane-waterpark/library/images/family/family1.png';
+  image[1] = 'http://www.waterpark.co.il/wp-content/themes/aeroplane-waterpark/library/images/family/family2.png';
+  image[2] = 'http://www.waterpark.co.il/wp-content/themes/aeroplane-waterpark/library/images/family/family3.png';
+  image[3] = 'http://www.waterpark.co.il/wp-content/themes/aeroplane-waterpark/library/images/family/family4.png';
+  image[4] = 'http://www.waterpark.co.il/wp-content/themes/aeroplane-waterpark/library/images/family/family5.png';
   var size = image.length;
   var x = Math.floor(size*Math.random());
 

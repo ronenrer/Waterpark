@@ -36,7 +36,7 @@
 					</div>				
 					<div class="bottom-footer clearfix">
 						<p class="source-org copyright pull-right">&copy; <?php echo date('Y'); ?> <?php bloginfo( 'name' ); ?></p>
-						<p class="credits pull-left"><img src="<?php echo get_stylesheet_directory_uri()?>/library/images/mt-logo.png"/></p>
+						<p class="credits pull-left"><a href="https://he-il.facebook.com/moderntalkingil" target="_blank"><img src="<?php echo get_stylesheet_directory_uri()?>/library/images/mt-logo.png"/></a></p>
 					</div>
 				</div>
 

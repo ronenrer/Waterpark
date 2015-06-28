@@ -86,6 +86,15 @@ function bones_register_sidebars() {
 		'before_title' => '<h4 class="widgettitle">',
 		'after_title' => '</h4>',
 	 ));
+	register_sidebar(array(
+		'id' => 'events',
+		'name' => __( 'Today Events', 'bonestheme' ),
+		'description' => __( 'Today Events', 'bonestheme' ),
+		'before_widget' => '<div id="%1$s" class="widget %2$s">',
+		'after_widget' => '</div>',
+		'before_title' => '<h4 class="widgettitle">',
+		'after_title' => '</h4>',
+	 ));
 
 	register_sidebar(array(
 		'id' => 'footer1',
@@ -187,5 +196,22 @@ if( function_exists('acf_add_options_page') ) {
   ));
     
 }
+/* VIDEO CONTAINER*/
+function div_wrapper($content) {
+    // match any iframes
+    $pattern = '~<iframe.*</iframe>|<embed.*</embed>~';
+    preg_match_all($pattern, $content, $matches);
 
+    foreach ($matches[0] as $match) {
+        // wrap matched iframe with div
+        $wrappedframe = '<div class="embed-responsive embed-responsive-16by9">' . $match . '</div>';
+
+        //replace original iframe with new in content
+        $content = str_replace($match, $wrappedframe, $content);
+    }
+
+    return $content;    
+}
+add_filter('the_content', 'div_wrapper');
+add_filter('the_excerpt', 'div_wrapper');
 ?>

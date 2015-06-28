@@ -165,7 +165,7 @@ img{max-width:100%;height:auto;}
 	}
 }
 .home .article-footer{
-	margin-top:10px;
+	margin-top:7px;
 }
 .home-bottom{
 	.instagram {
@@ -202,14 +202,32 @@ img{max-width:100%;height:auto;}
 	text-align:center;
 	color:@brand-accent-light;
 	font-size:@font-size-h3;
-	position: relative;
-	#current-state{
-		line-height: 1.2em;
-	 	display: block;
-	 	position: absolute;
-	 	top: 50%;
-	 	.translate(0,-50%);
+	.widget{margin-bottom:0}
+	.modulewidget-upcoming_events-2-title{
+		width:auto !important;
+		background: none;
+		border:0;		
+		.pad{
+			position: relative;
+			text-align:center;
+			height:92px;
+			a{
+				line-height: 1.2em;
+			 	display: block;
+			 	position: absolute;
+			 	top: 50%;
+			 	left:50%;
+			 	.translate(-50%,-50%);
+			 	color:@brand-accent !important;
+			 	font-size:24px !important;font-family:@font-family-base !important;
+			 	pointer-events: none;
+			 	br{display: none;}
+			}		 
+		}
+		div{padding:0 !important}	 	
+		hr{display:none;}			
 	}
+	#titlewidget-upcoming_events-2-title:link, #see_morewidget-upcoming_events-2-title{color:@brand-accent !important;}
 }
 .awesome-weather-wrap{
 	border-right:1px solid #fff;

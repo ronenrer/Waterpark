@@ -48,7 +48,7 @@ Template Name: Homepage
 							</section>
 
 							<footer class="article-footer">
-								<img src="<?php echo get_stylesheet_directory_uri()?>/library/images/banner1.jpg"/>
+								<?php echo do_shortcode('[metaslider id="263"]')?>
 							</footer>
 
 						</article>
