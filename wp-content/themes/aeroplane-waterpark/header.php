@@ -63,11 +63,17 @@
 				}(document, 'script', 'facebook-jssdk'));
 			</script>
 		<?php endif;?>
+		<?php 
+			$logo = get_field('logo',option);
+			$tagline = get_field('tagline',option);
+			$phone = get_field('phone',option);
+			$facebook = get_field('facebook',option);
+		?>
 		<div class="container row-offcanvas row-offcanvas-right">
 			<header class="header">
 				<div class="top-header hidden-xs clearfix">
-					<div class="tagline pull-right ">החוויה המשפחתית <span>של הקיץ</span></div>
-					<div class="site-phone pull-left"><span>לפרטים והזמנות </span> <a href="tel:09-9595757">09-9595757</a></div>
+					<div class="tagline pull-right "><?php echo $tagline?></div>
+					<div class="site-phone pull-left"><span>לפרטים והזמנות </span> <a href="tel:<?php echo $phone ?>"><?php echo $phone ?></a></div>
 				</div>
 				<nav>
       			  <div class="container-fluid">
@@ -78,7 +84,7 @@
 			              <span class="icon-bar"></span>
 			              <span class="icon-bar"></span>
 			            </button>
-			              <a class="navbar-brand" href="<?php echo home_url(); ?>" rel="nofollow"><img src="<?php echo get_template_directory_uri(); ?>/library/images/logo.png"/></a>
+			              <a class="navbar-brand" href="<?php echo home_url(); ?>" rel="nofollow"><img src="<?php echo $logo['url'] ?>"/></a>
 			          </div>
 					<?php 
 						wp_nav_menu( array(
@@ -99,8 +105,8 @@
 			</header>
 			<?php if (is_front_page()):?>
 					<div class="fullwidth video-container">		
-						<video width="100%" height="auto" poster="<?php echo get_stylesheet_directory_uri()?>/library/images/home-video-poster.jpg" autoplay>
-			     		   <source src="<?php echo get_stylesheet_directory_uri()?>/library/images/home-video.mp4" type="video/mp4">
+						<video width="100%" height="auto" poster="<?php echo get_field('home_video_poster')?>" autoplay>
+			     		   <source src="<?php echo get_field('home_video')?>" type="video/mp4">
 			    		</video>	
 						<!--iframe id="ytplayer" width="1280" height="720" src="https://www.youtube.com/embed/xUETMecysn4?rel=0&amp;controls=0&amp;volume=0&amp;showinfo=0&amp;autoplay=1&amp;loop=1&amp;enablejsapi=1" frameborder="0" allowfullscreen></iframe-->
 					</div>

@@ -23,21 +23,16 @@
 				
 							<section class="entry-content clearfix" itemprop="articleBody">
 									<?php the_content(); ?>
-									<?php if (is_page('5')):?>
-										<h2 style="text-align:center">10 עובדות ומספרים אודות פארק המים שפיים:</h2>
+									<?php if (is_page('5')):
+									if( have_rows('about_facts') ):?>
+										<h2 class="text-center">10 עובדות ומספרים אודות פארק המים שפיים:</h2>
 										<ol class="special">
-											<li>פארק שפיים הינו <strong>פארק המים הראשון</strong> שהוקם בישראל.</li>
-											<li>הפארק משתרע על פני <strong>כ100 דונם</strong> של מתקנים ומרחבים מוריקים.</li>
-											<li>בפארק <strong>26</strong> מסלולי גלישה ו-<strong>8</strong> מתחמי מים, הנגישים לקהל המבקרים דרך שדרה מרכזית החוצה את הפארק לאורכו.</li>
-											<li>בסקר שנערך באמצעות ה"גל החדש" בשנת 2012 נמצא כי פארק המים שפיים הוא <strong>פארק המים הפופולארי ביותר</strong>.</li>
-											<li>בחודשים יולי-אוגוסט עובדים בכל יום נתון בפארק למעלה <strong>מ-100</strong> עובדי שטח, מנהלה והצלה.</li>
-											<li><strong>כ-150</strong> פחי פסולת מפוזרים בשטחי פארק לנוחיות המבקרים ולשמירה על סביבה אסתטית ונקייה.</li>
-											<li>ילד מגיל שנתיים ומעלה חייב בכרטיס כניסה לפארק המים שפיים. המחיר אחיד לילד ולמבוגר.</li>
-											<li>בעולם הקאריבי לילדים מותקנות <strong>140 מזרקות מים</strong>. ניתן לתזמן אותן למוזיקה ולתאורה.</li>
-											<li>דלי המים הענק באותו מתחם מתרוקן לצהלות הילדים בכל <strong>4 דקות</strong>.</li>
-											<li>מגלשת הקרייזי קונס היא <strong>היחידה מסוגה בארץ</strong>.</li>
+											<?php while( have_rows('about_facts') ): the_row();
+											$fact =  get_sub_field('fact') ; ?>
+											<li><?php echo $fact ?></li>
+										<?php endwhile;?>
 										</ol>
-									<?php endif;?>
+									<?php endif; endif;?>
 									<?php 
 									if( have_rows('faq') ):
 										echo ' <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">';
@@ -61,8 +56,7 @@
 									 			</div>													
 										<?php  $i++; endwhile;
 										echo '</div>';	
-									endif;
-									 ?>
+									endif; ?>
 							</section>
 
 							</article>
